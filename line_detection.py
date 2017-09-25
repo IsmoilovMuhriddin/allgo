@@ -30,7 +30,7 @@ lines = cv2.HoughLinesP(edged,1,np.pi/180,10,80,1)
 #Draw lines on input image
 if(lines != None):
     for x1,y1,x2,y2 in lines[0]:
-        cv2.line(resized,(x1,y1),(x2,y2),(0,255,0),2)
+        cv2.line('resized',(x1,y1),(x2,y2),(0,255,0),2)
 
 cv2.imshow("line detect test", img) 
 cv2.waitKey(0)
