@@ -3,7 +3,7 @@ import picamera
 import picamera.array
 import time
 import cv2
-
+import numpy as np
 #Initialize camera
 camera = picamera.PiCamera()
 camera.resolution = (640,480)
