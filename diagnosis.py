@@ -4,12 +4,15 @@
 #include "PCA9685.h"
 #include "Ultrasonic.h"
 #include <signal.h>"""
-
+from multiprocessing import Process
+import sys
 import Adafruit_PCA9685 as pca
 import wiringpi as wp
 import signal
 import sys
 import time
+import hcsr04sensor as uls
+
 LOW = 0
 HIGH = 1
 OUTPUT = wp.OUTPUT
@@ -31,9 +34,12 @@ IN = [21, 22, 26, 23] # 21:left_IR, 22:center_IR, 26:right_IR, 23:ultra_echo
 
 ULTRASONIC_TRIG	= 3 # TRIG port is to use as output signal
 ULTRASONIC_ECHO = 23 # ECHO port is to use as input signal 
- 
-pca9685 =pca.PCA9685()  # An instance of the motor & buzzer
+
+# An instance of the motor & buzzer
+pca9685 =pca.PCA9685()  
 #Ultrasonic ultra; # An instance of the ultrasonic sensor
+ultra = uls.Measurement(ULTRASONIC_TRIG,ULTRASONIC_ECHO)
+
 # distance range: 2cm ~ 5m
 # angular range: 15deg
 # resolution: 3mm
@@ -109,18 +115,21 @@ def action(menu):
 		wp.digitalWrite(OUT[2], HIGH);
 		time.sleep(20);
 		wp.digitalWrite(OUT[2], LOW);
-	elif menu== 6:
+	elif menu ==6:
+	    #ultrasonic
+	    checkUltra();	
+	elif menu== 9:
 		pca9685.go_right();
 		time.sleep(20);
 		pca9685.stop();
-	elif menu== 7:
+	elif menu== 10:
 		pca9685.go_left();
 		time.sleep(20);
 		pca9685.stop();		
 	elif menu== 8:
 		print("Beeping for 2 seconds\n");
 		pca9685.on_buzz();
-		time.sleep(2000);
+		time.sleep(20);
 		pca9685.off_buzz();
 		
 	elif menu== 11:
@@ -141,13 +150,18 @@ def loop():
 	rlinevalue = 0
 	
 	print("This is a diagnostic program for your mobile robot.\n")
-	print("0: go foward\n1: go backward\n2: front left led\n3: frount right led\n4: rear left led\n5: rear right led\n6: ultrasonic\n7: IR\n8: buzzer\n11: Exit the program\n")
+	print("0: go foward\n1: go backward\n2: front left led\n3: frount right led\n",
+		"4: rear left led\n5: rear right led\n6: ultrasonic\n7: IR\n8: buzzer\n9:go right\n10: go left",
+		"\n11: Exit the program\n")
 	print("Please select one of them: ")
 	menu = int(input())
 	action(menu)
 	menu = -1
 
-
+def check_ultra():
+    rawDis=ultra.raw_distance()
+	disValue = ultra.distance_metric(rawDis)
+	print("Distance:{0}\t Raw dist:{1}",rawDis,disValue)
 """// obstacle detection and move to another derection.
 void checkUltra(){
 	float disValue = ultra.ReadDista
