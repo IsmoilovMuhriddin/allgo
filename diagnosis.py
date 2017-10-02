@@ -69,7 +69,7 @@ def action(menu):
 		pca9685.stop();
 		
 	elif menu== 2:
-		// frount left
+		# frount left
 		wp.digitalWrite(OUT[0], HIGH);
 		delay(50);
 		wp.digitalWrite(OUT[0], LOW);
@@ -99,7 +99,7 @@ def action(menu):
 		wp.digitalWrite(OUT[3], LOW);
 		
 	elif menu== 5:
-		// rear right
+		# rear right
 		wp.digitalWrite(OUT[2], HIGH);
 		delay(50);
 		wp.digitalWrite(OUT[2], LOW);
