@@ -129,14 +129,13 @@ def loop():
 	llinevalue = 0
 	clinevalue = 0
 	rlinevalue = 0
-	action(menu)
-	menu = -1
+	
 	print("This is a diagnostic program for your mobile robot.\n")
 	print("0: go foward\n1: go backward\n2: front left led\n3: frount right led\n4: rear left led\n5: rear right led\n6: ultrasonic\n7: IR\n8: buzzer\n11: Exit the program\n")
 	print("Please select one of them: ")
 	menu = int(input())
-	
-	
+	action(menu)
+	menu = -1
 
 
 """// obstacle detection and move to another derection.
