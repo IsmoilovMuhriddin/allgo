@@ -117,7 +117,7 @@ def action(menu):
 		wp.digitalWrite(OUT[2], LOW);
 	elif menu ==6:
 	    #ultrasonic
-	    checkUltra();	
+	    checkUltra();
 	elif menu== 9:
 		pca9685.go_right();
 		time.sleep(20);
@@ -125,7 +125,7 @@ def action(menu):
 	elif menu== 10:
 		pca9685.go_left();
 		time.sleep(20);
-		pca9685.stop();		
+		pca9685.stop();
 	elif menu== 8:
 		print("Beeping for 2 seconds\n");
 		pca9685.on_buzz();
@@ -159,9 +159,9 @@ def loop():
 	menu = -1
 
 def check_ultra():
-    rawDis=ultra.raw_distance()
-	disValue = ultra.distance_metric(rawDis)
-	print("Distance:{0}\t Raw dist:{1}",rawDis,disValue)
+	rawDis=ultra.raw_distance()
+    disValue = ultra.distance_metric(rawDis)
+    print("Distance:{0}\t Raw dist:{1}",rawDis,disValue)
 """// obstacle detection and move to another derection.
 void checkUltra(){
 	float disValue = ultra.ReadDista
