@@ -45,11 +45,11 @@ void intHandler(int dummy);
 def setup():
     wp.wiringPiSetup()  # Initialize wiringPi to load Raspbarry Pi PIN numbering scheme
     
-	#"""
-	#for(i=0; i<sizeof(OUT); i++){
-	#	pinMode(OUT[i], OUTPUT); // Set the pin as output mode
-	#	wp.digitalWrite(OUT[i], LOW); // Transmit HIGH or LOW value to the pin(5V ~ 0V)
-	#}"""
+	"""
+	for(i=0; i<sizeof(OUT); i++){
+		pinMode(OUT[i], OUTPUT); // Set the pin as output mode
+		wp.digitalWrite(OUT[i], LOW); // Transmit HIGH or LOW value to the pin(5V ~ 0V)
+	}"""
     for i in range(len(OUT)):
         wp.pinMode(OUT[i],OUTPUT)
 		wp.wp.digitalWrite(OUT[i], LOW_PIN)
@@ -163,7 +163,6 @@ def loop():
 void checkUltra(){
 	float disValue = ultra.ReadDistanceCentimeter();
     printf("ultrasonic: %f\n",disValue);
-	spais
 """
 
 def signal_handler(dummy):
@@ -179,5 +178,5 @@ def main (int argc, char** argv){
 	while(keepRunning):
 		loop()
     return 0
-#start here
+
 main()    
