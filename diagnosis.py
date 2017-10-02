@@ -11,8 +11,7 @@ import wiringpi as wp
 import signal
 import sys
 import time
-from .src import ultrasonic as uls
-
+from allgo_utils import Ultrasonic as uls
 LOW = 0
 HIGH = 1
 OUTPUT = wp.OUTPUT
