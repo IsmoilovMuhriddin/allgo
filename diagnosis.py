@@ -9,6 +9,7 @@ import Adafruit_PCA9685 as pca
 import wiringpi as wp
 import signal
 import sys
+import time
 LOW = 0
 HIGH = 1
 OUTPUT = wp.OUTPUT
@@ -61,54 +62,61 @@ def action(menu):
 
 	if menu==0:
 		pca9685.go_forward();
-		time.sleep(500);
+		time.sleep(20);
 		pca9685.stop();
 		
 	elif menu== 1:
 		pca9685.go_back();
-		time.sleep(500);
+		time.sleep(20);
 		pca9685.stop();
 		
 	elif menu== 2:
 		# frount left
 		wp.digitalWrite(OUT[0], HIGH);
-		time.sleep(50);
+		time.sleep(20);
 		wp.digitalWrite(OUT[0], LOW);
-		time.sleep(50);
+		time.sleep(20);
 		wp.digitalWrite(OUT[0], HIGH);
-		time.sleep(50);
+		time.sleep(20);
 		wp.digitalWrite(OUT[0], LOW);
 		
 	elif menu== 3:
 		#// frount right
 		wp.digitalWrite(OUT[1], HIGH);
-		time.sleep(50);
+		time.sleep(20);
 		wp.digitalWrite(OUT[1], LOW);
-		time.sleep(50);
+		time.sleep(20);
 		wp.digitalWrite(OUT[1], HIGH);
-		time.sleep(50);
+		time.sleep(20);
 		wp.digitalWrite(OUT[1], LOW);
 		
 	elif menu== 4:
 		#// rear left
 		wp.digitalWrite(OUT[3], HIGH);
-		time.sleep(50);
+		time.sleep(20);
 		wp.digitalWrite(OUT[3], LOW);
-		time.sleep(50);
+		time.sleep(20);
 		wp.digitalWrite(OUT[3], HIGH);
-		time.sleep(50);
+		time.sleep(20);
 		wp.digitalWrite(OUT[3], LOW);
 		
 	elif menu== 5:
 		# rear right
 		wp.digitalWrite(OUT[2], HIGH);
-		time.sleep(50);
+		time.sleep(20);
 		wp.digitalWrite(OUT[2], LOW);
-		time.sleep(50);
+		time.sleep(20);
 		wp.digitalWrite(OUT[2], HIGH);
-		time.sleep(50);
+		time.sleep(20);
 		wp.digitalWrite(OUT[2], LOW);
-		
+	elif menu== 6:
+		pca9685.go_right();
+		time.sleep(20);
+		pca9685.stop();
+	elif menu== 7:
+		pca9685.go_left();
+		time.sleep(20);
+		pca9685.stop();		
 	elif menu== 8:
 		printf("Beeping for 2 seconds\n");
 		pca9685.on_buzz();
