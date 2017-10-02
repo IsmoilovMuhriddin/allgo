@@ -58,7 +58,7 @@ def setup():
 
 def check_ultra():
 	disValue=ultra.distance(3000)
-	print("Distance:{0}\t",disValue)
+	print("Distance:%.2f\t"%disValue)
 def action(menu):
    	global curMillis
 
