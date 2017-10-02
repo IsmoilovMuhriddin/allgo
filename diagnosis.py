@@ -108,27 +108,6 @@ def action(menu):
 		delay(50);
 		wp.digitalWrite(OUT[2], LOW);
 		
-	"""elif menu== 6:
-		for i in range(5):
-
-		for(int i=0; i<5; i++){
-			curMillis = millis();
-			if(curMillis - preMillis > 100){
-				checkUltra();
-				preMillis = curMillis;
-			}
-			}
-		
-	elif menu== 7:
-		printf("Check the value change after covering the IR\n");
-		for(int i=0; i<5; i++){
-			llinevalue = digitalRead(IN[0]);
-			clinevalue = digitalRead(IN[1]);
-			rlinevalue = digitalRead(IN[2]);
-				printf("left : %d, center : %d, right : %d\n", llinevalue, clinevalue, rlinevalue);
-				delay(200);
-			}
-	"""		
 	elif menu== 8:
 		printf("Beeping for 2 seconds\n");
 		pca9685.on_buzz();
