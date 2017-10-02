@@ -149,13 +149,12 @@ def signal_handler(dummy):
         print("SIGNAL INTERRUPT",dummy)
         time.sleep(1000)      
         keepRunning = 0;
-signal.signal(signal.SIGINT, signal_handler)
 
     
 def main (**kwargs):
     setup()
-    signal(SIGINT, intHandler)
-    while keepRunning:
+    signal.signal(signal.SIGINT, signal_handler)
+	while keepRunning:
     	loop()
     return 0
 
