@@ -1,12 +1,5 @@
-"""// diagnosis.cpp
-#include <wiringPi.h>
-#include <stdio.h>
-#include "PCA9685.h"
-#include "Ultrasonic.h"
-#include <signal.h>"""
-from multiprocessing import Process
 import sys
-import Adafruit_PCA9685 as pca
+import rasp_car_PCA9685 as pca
 import wiringpi as wp
 import signal
 import sys
