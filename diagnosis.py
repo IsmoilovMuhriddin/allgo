@@ -9,7 +9,8 @@ import Adafruit_PCA9685 as pca
 import wiringpi as wp
 import signal
 import sys
-
+LOW =pca.LOW_PIN
+HIGH = pca.HIGH_PIN 
 OUTPUT = wp.OUTPUT
 INPUT = wp.INPUT
 
@@ -52,7 +53,7 @@ def setup():
     }"""
     for i in range(len(OUT)):
         wp.pinMode(OUT[i],OUTPUT)
-        wp.digitalWrite(OUT[i], LOW_PIN)
+        wp.digitalWrite(OUT[i], LOW)
     for i in range(len(IN)):
         wp.pinMode(IN[i],INPUT)
 def action(menu):
