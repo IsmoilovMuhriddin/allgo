@@ -6,7 +6,7 @@ OUTPUT = wp.OUTPUT
 INPUT = wp.INPUT
 
 class Ultrasonic(object):
-	def __init__(self, trig,echo):
+    def __init__(self, trig,echo):
 		self.trig = trig
 		self.echo = echo
 		self.end_time=0
