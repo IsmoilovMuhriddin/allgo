@@ -61,58 +61,58 @@ def action(menu):
 
 	if menu==0:
 		pca9685.go_forward();
-	    time.sleep(500);
+		time.sleep(500);
 		pca9685.stop();
 		
 	elif menu== 1:
 		pca9685.go_back();
-	    time.sleep(500);
+		time.sleep(500);
 		pca9685.stop();
 		
 	elif menu== 2:
 		# frount left
 		wp.digitalWrite(OUT[0], HIGH);
-	    time.sleep(50);
+		time.sleep(50);
 		wp.digitalWrite(OUT[0], LOW);
-	    time.sleep(50);
+		time.sleep(50);
 		wp.digitalWrite(OUT[0], HIGH);
-	    time.sleep(50);
+		time.sleep(50);
 		wp.digitalWrite(OUT[0], LOW);
 		
 	elif menu== 3:
 		#// frount right
 		wp.digitalWrite(OUT[1], HIGH);
-	    time.sleep(50);
+		time.sleep(50);
 		wp.digitalWrite(OUT[1], LOW);
-	    time.sleep(50);
+		time.sleep(50);
 		wp.digitalWrite(OUT[1], HIGH);
-	    time.sleep(50);
+		time.sleep(50);
 		wp.digitalWrite(OUT[1], LOW);
 		
 	elif menu== 4:
 		#// rear left
 		wp.digitalWrite(OUT[3], HIGH);
-	    time.sleep(50);
+		time.sleep(50);
 		wp.digitalWrite(OUT[3], LOW);
-	    time.sleep(50);
+		time.sleep(50);
 		wp.digitalWrite(OUT[3], HIGH);
-	    time.sleep(50);
+		time.sleep(50);
 		wp.digitalWrite(OUT[3], LOW);
 		
 	elif menu== 5:
 		# rear right
 		wp.digitalWrite(OUT[2], HIGH);
-	    time.sleep(50);
+		time.sleep(50);
 		wp.digitalWrite(OUT[2], LOW);
-	    time.sleep(50);
+		time.sleep(50);
 		wp.digitalWrite(OUT[2], HIGH);
-	    time.sleep(50);
+		time.sleep(50);
 		wp.digitalWrite(OUT[2], LOW);
 		
 	elif menu== 8:
 		printf("Beeping for 2 seconds\n");
 		pca9685.on_buzz();
-	    time.sleep(2000);
+		time.sleep(2000);
 		pca9685.off_buzz();
 		
 	elif menu== 11:
@@ -125,7 +125,9 @@ def action(menu):
 	print("\n")
 	menu = -1
 def loop():
-	"""//  return the current time(elapsed time since your arduino started) in milliseconds(1/1000 second)"""
+	"""//  return the cu
+	time(el
+	time since your arduino started) in milliseconds(1/1000 second)"""
 	llinevalue = 0
 	clinevalue = 0
 	rlinevalue = 0
@@ -140,13 +142,15 @@ def loop():
 
 """// obstacle detection and move to another derection.
 void checkUltra(){
-	float disValue = ultra.ReadDistanceCentimeter();
+	float disValue = ultra.ReadDista
+	timeter();
     printf("ultrasonic: %f\n",disValue);
 """
 
 def signal_handler(dummy):
         print("SIGNAL INTERRUPT",dummy)
-        time.sleep(1000)      
+  
+  time.sleep(1000)      
         keepRunning = 0;
 
     
