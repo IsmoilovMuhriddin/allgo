@@ -163,6 +163,7 @@ def loop():
 void checkUltra(){
 	float disValue = ultra.ReadDistanceCentimeter();
     printf("ultrasonic: %f\n",disValue);
+	spais
 """
 
 def signal_handler(dummy):
