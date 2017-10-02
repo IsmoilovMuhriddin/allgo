@@ -11,7 +11,7 @@ import wiringpi as wp
 import signal
 import sys
 import time
-import hcsr04sensor.sensor as uls
+from .src import ultrasonic as uls
 
 LOW = 0
 HIGH = 1
@@ -38,7 +38,7 @@ ULTRASONIC_ECHO = 23 # ECHO port is to use as input signal
 # An instance of the motor & buzzer
 pca9685 =pca.PCA9685()  
 #Ultrasonic ultra; # An instance of the ultrasonic sensor
-ultra = uls.Measurement(ULTRASONIC_TRIG,ULTRASONIC_ECHO)
+ultra = uls.Ultrasonic(ULTRASONIC_TRIG,ULTRASONIC_ECHO)
 
 # distance range: 2cm ~ 5m
 # angular range: 15deg
@@ -65,9 +65,8 @@ def setup():
         wp.pinMode(IN[i],INPUT)
 
 def check_ultra():
-	rawDis=ultra.raw_distance()
-	disValue = ultra.distance_metric(rawDis)
-	print("Distance:{0}\t Raw dist:{1}",rawDis,disValue)
+	disValue=ultra.distance(1000)
+	print("Distance:{0}\t",disValue)
 def action(menu):
    	global curMillis
 
