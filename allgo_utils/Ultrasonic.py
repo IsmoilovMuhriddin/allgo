@@ -16,9 +16,9 @@ class Ultrasonic(object):
 		wp.digitalWrite(self.trig,LOW)
 		time.sleep(0.5)
     def distance(self,timeout):
-    	time.sleep(0.01)
-    	wp.digitalWrite(self.trig,HIGH)
-    	time.sleep(0.01)
+        time.sleep(0.01):
+            wp.digitalWrite(self.trig,HIGH)
+            time.sleep(0.01)
     	wp.digitalWrite(self.trig,LOW)
 
     	now_time = time.time()
