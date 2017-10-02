@@ -160,8 +160,8 @@ def loop():
 
 def check_ultra():
 	rawDis=ultra.raw_distance()
-    disValue = ultra.distance_metric(rawDis)
-    print("Distance:{0}\t Raw dist:{1}",rawDis,disValue)
+	disValue = ultra.distance_metric(rawDis)
+	print("Distance:{0}\t Raw dist:{1}",rawDis,disValue)
 """// obstacle detection and move to another derection.
 void checkUltra(){
 	float disValue = ultra.ReadDista
