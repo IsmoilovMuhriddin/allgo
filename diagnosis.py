@@ -52,7 +52,7 @@ def setup():
     }"""
     for i in range(len(OUT)):
         wp.pinMode(OUT[i],OUTPUT)
-	wp.wp.digitalWrite(OUT[i], LOW_PIN)
+        wp.digitalWrite(OUT[i], LOW_PIN)
     for i in range(len(IN)):
         wp.pinMode(IN[i],INPUT)
 def action(menu):
