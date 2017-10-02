@@ -17,10 +17,10 @@ class Ultrasonic(object):
         time.sleep(0.5)
     #here semms error on indent   
     def distance(self,timeout):
-		time.sleep(0.01)
-		wp.digitalWrite(self.trig,HIGH)
-		time.sleep(0.01)
-		wp.digitalWrite(self.trig,LOW)
+        time.sleep(0.01)
+        wp.digitalWrite(self.trig,HIGH)
+        time.sleep(0.01)
+        wp.digitalWrite(self.trig,LOW)
 
         now_time = time.time()
         while wp.digitalRead(self.echo==LOW and time.time()-now_time<timeout):
