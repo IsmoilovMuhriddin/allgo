@@ -7,20 +7,20 @@ INPUT = wp.INPUT
 
 class Ultrasonic(object):
     def __init__(self, trig,echo):
-		self.trig = trig
-		self.echo = echo
-		self.end_time=0
-		self.start_time=0
-		wp.pinMode(self.trig,OUTPUT)
-		wp.pinMode(self.echo,INPUT)
-		wp.digitalWrite(self.trig,LOW)
-		time.sleep(0.5)
+        self.trig = trig
+        self.echo = echo
+        self.end_time=0
+        self.start_time=0
+        wp.pinMode(self.trig,OUTPUT)
+        wp.pinMode(self.echo,INPUT)
+        wp.digitalWrite(self.trig,LOW)
+        time.sleep(0.5)
     #here semms error on indent   
     def distance(self,timeout):
-        time.sleep(0.01)
-        wp.digitalWrite(self.trig,HIGH)
-        time.sleep(0.01)
-        wp.digitalWrite(self.trig,LOW)
+		time.sleep(0.01)
+		wp.digitalWrite(self.trig,HIGH)
+		time.sleep(0.01)
+		wp.digitalWrite(self.trig,LOW)
 
         now_time = time.time()
         while wp.digitalRead(self.echo==LOW and time.time()-now_time<timeout):
