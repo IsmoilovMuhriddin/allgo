@@ -45,11 +45,11 @@ void intHandler(int dummy);
 def setup():
     wp.wiringPiSetup()  # Initialize wiringPi to load Raspbarry Pi PIN numbering scheme
     
-	"""
-	for(i=0; i<sizeof(OUT); i++){
-		pinMode(OUT[i], OUTPUT); // Set the pin as output mode
-		wp.digitalWrite(OUT[i], LOW); // Transmit HIGH or LOW value to the pin(5V ~ 0V)
-	}"""
+	#"""
+	#for(i=0; i<sizeof(OUT); i++){
+	#	pinMode(OUT[i], OUTPUT); // Set the pin as output mode
+	#	wp.digitalWrite(OUT[i], LOW); // Transmit HIGH or LOW value to the pin(5V ~ 0V)
+	#}"""
     for i in range(len(OUT)):
         wp.pinMode(OUT[i],OUTPUT)
 		wp.wp.digitalWrite(OUT[i], LOW_PIN)
