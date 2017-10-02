@@ -113,7 +113,7 @@ def action(menu):
 		pca9685.on_buzz();
 		delay(2000);
 		pca9685.off_buzz();
-		break;
+		
 	elif menu== 11:
 		printf("EXIT\n");
 		keepRunning = 0;
