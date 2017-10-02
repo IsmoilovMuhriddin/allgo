@@ -148,10 +148,9 @@ void checkUltra(){
 """
 
 def signal_handler(dummy):
-        print("SIGNAL INTERRUPT",dummy)
-  
-  time.sleep(1000)      
-        keepRunning = 0;
+	print("SIGNAL INTERRUPT",dummy)
+	time.sleep(1000)
+	keepRunning = 0;
 
     
 def main (**kwargs):
