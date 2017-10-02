@@ -9,8 +9,8 @@ import Adafruit_PCA9685 as pca
 import wiringpi as wp
 import signal
 import sys
-LOW =pca.LOW_PIN
-HIGH = pca.HIGH_PIN 
+LOW = 0
+HIGH = 1
 OUTPUT = wp.OUTPUT
 INPUT = wp.INPUT
 
