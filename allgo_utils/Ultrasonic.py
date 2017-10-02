@@ -1,4 +1,4 @@
-import wirinpi as wp
+import wiringpi as wp
 import time
 LOW =0
 HIGH =1
@@ -17,17 +17,15 @@ class Ultrasonic(object):
         time.sleep(0.5)
     #here semms error on indent   
     def distance(self,timeout):
-<<<<<<< HEAD
-        time.sleep(0.01):
-            wp.digitalWrite(self.trig,HIGH)
-            time.sleep(0.01)
+        time.sleep(0.01)
+        wp.digitalWrite(self.trig,HIGH)
+        time.sleep(0.01)
     	wp.digitalWrite(self.trig,LOW)
-=======
+
         time.sleep(0.01)
         wp.digitalWrite(self.trig,HIGH)
         time.sleep(0.01)
         wp.digitalWrite(self.trig,LOW)
->>>>>>> 8396b8269e42b739ca9c9806d36108a4b4e4ee75
 
         now_time = time.time()
         while wp.digitalRead(self.echo==LOW and time.time()-now_time<timeout):

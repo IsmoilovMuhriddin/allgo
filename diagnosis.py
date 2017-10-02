@@ -37,7 +37,7 @@ ULTRASONIC_ECHO = 23 # ECHO port is to use as input signal
 # An instance of the motor & buzzer
 pca9685 =pca.PCA9685()  
 #Ultrasonic ultra; # An instance of the ultrasonic sensor
-ultra = uls.Ultrasonic(ULTRASONIC_TRIG,ULTRASONIC_ECHO)
+ultra = uls(ULTRASONIC_TRIG,ULTRASONIC_ECHO)
 
 # distance range: 2cm ~ 5m
 # angular range: 15deg
@@ -123,16 +123,16 @@ def action(menu):
 	    check_ultra();
 	elif menu== 9:
 		pca9685.go_right();
-		time.sleep(20);
+		time.sleep(5);
 		pca9685.stop();
 	elif menu== 10:
 		pca9685.go_left();
-		time.sleep(20);
+		time.sleep(5);
 		pca9685.stop();
 	elif menu== 8:
 		print("Beeping for 2 seconds\n");
 		pca9685.on_buzz();
-		time.sleep(20);
+		time.sleep(2);
 		pca9685.off_buzz();
 		
 	elif menu== 11:
