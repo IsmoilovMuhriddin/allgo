@@ -1,0 +1,754 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+App	../python/camshift.py	/^class App(object):$/;"	kind:class	line:41
+App	../python/demo.py	/^class App:$/;"	kind:class	line:67
+App	../python/digits_adjust.py	/^class App(object):$/;"	kind:class	line:53
+App	../python/feature_homography.py	/^class App:$/;"	kind:class	line:39
+App	../python/lk_homography.py	/^class App:$/;"	kind:class	line:51
+App	../python/lk_track.py	/^class App:$/;"	kind:class	line:39
+App	../python/mosse.py	/^class App:$/;"	kind:class	line:147
+App	../python/plane_ar.py	/^class App:$/;"	kind:class	line:44
+App	../python/plane_tracker.py	/^class App:$/;"	kind:class	line:141
+App	../python/watershed.py	/^class App:$/;"	kind:class	line:32
+BLACK	../python/grabcut.py	/^BLACK = [0,0,0]         # sure BG$/;"	kind:variable	line:40
+BLUE	../python/grabcut.py	/^BLUE = [255,0,0]        # rectangle color$/;"	kind:variable	line:37
+Book	../python/video.py	/^class Book(VideoSynthBase):$/;"	kind:class	line:85
+Boost	../python/letter_recog.py	/^class Boost(LetterStatModel):$/;"	kind:class	line:88
+Bunch	../python/common.py	/^class Bunch(object):$/;"	kind:class	line:25
+CLASS_N	../python/digits.py	/^CLASS_N = 10$/;"	kind:variable	line:44
+Chess	../python/video.py	/^class Chess(VideoSynthBase):$/;"	kind:class	line:109
+Cube	../python/video.py	/^class Cube(VideoSynthBase):$/;"	kind:class	line:98
+DIGITS_FN	../python/digits.py	/^DIGITS_FN = '..\/data\/digits.png'$/;"	kind:variable	line:45
+DRAW_BG	../python/grabcut.py	/^DRAW_BG = {'color' : BLACK, 'val' : 0}$/;"	kind:variable	line:43
+DRAW_FG	../python/grabcut.py	/^DRAW_FG = {'color' : WHITE, 'val' : 1}$/;"	kind:variable	line:44
+DRAW_PR_BG	../python/grabcut.py	/^DRAW_PR_BG = {'color' : RED, 'val' : 2}$/;"	kind:variable	line:46
+DRAW_PR_FG	../python/grabcut.py	/^DRAW_PR_FG = {'color' : GREEN, 'val' : 3}$/;"	kind:variable	line:45
+DummyTask	../python/video_threaded.py	/^class DummyTask:$/;"	kind:class	line:31
+FLANN_INDEX_KDTREE	../python/find_obj.py	/^FLANN_INDEX_KDTREE = 1  # bug: flann enums are missing$/;"	kind:variable	line:24
+FLANN_INDEX_KDTREE	../python/plane_tracker.py	/^FLANN_INDEX_KDTREE = 1$/;"	kind:variable	line:44
+FLANN_INDEX_LSH	../python/find_obj.py	/^FLANN_INDEX_LSH    = 6$/;"	kind:variable	line:25
+FLANN_INDEX_LSH	../python/plane_tracker.py	/^FLANN_INDEX_LSH    = 6$/;"	kind:variable	line:45
+GREEN	../python/grabcut.py	/^GREEN = [0,255,0]       # PR FG$/;"	kind:variable	line:39
+I	../python/tutorial_code/core/mat_mask_operations/mat_mask_operations.py	/^I = cv2.imread("..\/data\/lena.jpg")$/;"	kind:variable	line:30
+IMG	../python/deconvolution.py	/^    IMG = cv2.dft(img, flags=cv2.DFT_COMPLEX_OUTPUT)$/;"	kind:variable	line:89
+J	../python/tutorial_code/core/mat_mask_operations/mat_mask_operations.py	/^J = sharpen(I)$/;"	kind:variable	line:34
+K	../python/tutorial_code/core/mat_mask_operations/mat_mask_operations.py	/^K = cv2.filter2D(I, -1, kernel) # ddepth = -1, means destination image has depth same as input image.$/;"	kind:variable	line:48
+KNearest	../python/digits.py	/^class KNearest(StatModel):$/;"	kind:class	line:78
+KNearest	../python/letter_recog.py	/^class KNearest(LetterStatModel):$/;"	kind:class	line:76
+LetterStatModel	../python/letter_recog.py	/^class LetterStatModel(object):$/;"	kind:class	line:39
+LinkManager	../python/demo.py	/^class LinkManager:$/;"	kind:class	line:33
+MIN_MATCH_COUNT	../python/plane_tracker.py	/^MIN_MATCH_COUNT = 10$/;"	kind:variable	line:51
+MLP	../python/letter_recog.py	/^class MLP(LetterStatModel):$/;"	kind:class	line:125
+MOSSE	../python/mosse.py	/^class MOSSE:$/;"	kind:class	line:58
+Model	../python/letter_recog.py	/^    Model = models[args['--model']]$/;"	kind:variable	line:166
+P1	../python/stereo_match.py	/^        P1 = 8*3*window_size**2,$/;"	kind:variable	line:48
+P2	../python/stereo_match.py	/^        P2 = 32*3*window_size**2,$/;"	kind:variable	line:49
+PlanarTarget	../python/plane_tracker.py	/^PlanarTarget = namedtuple('PlaneTarget', 'image, rect, keypoints, descrs, data')$/;"	kind:variable	line:60
+PlaneTracker	../python/plane_tracker.py	/^class PlaneTracker:$/;"	kind:class	line:71
+Q	../python/stereo_match.py	/^    Q = np.float32([[1, 0, 0, -0.5*w],$/;"	kind:variable	line:62
+RED	../python/grabcut.py	/^RED = [0,0,255]         # PR BG$/;"	kind:variable	line:38
+RTrees	../python/letter_recog.py	/^class RTrees(LetterStatModel):$/;"	kind:class	line:62
+RectSelector	../python/common.py	/^class RectSelector:$/;"	kind:class	line:165
+SVM	../python/digits.py	/^class SVM(StatModel):$/;"	kind:class	line:90
+SVM	../python/letter_recog.py	/^class SVM(LetterStatModel):$/;"	kind:class	line:109
+SZ	../python/digits.py	/^SZ = 20 # size of each digit is SZ x SZ$/;"	kind:variable	line:43
+Sketcher	../python/common.py	/^class Sketcher:$/;"	kind:class	line:86
+StatModel	../python/digits.py	/^class StatModel(object):$/;"	kind:class	line:72
+StatValue	../python/common.py	/^class StatValue:$/;"	kind:class	line:154
+TestSceneRender	../python/tst_scene_render.py	/^class TestSceneRender():$/;"	kind:class	line:14
+Timer	../python/common.py	/^def Timer(msg):$/;"	kind:function	line:146
+TrackedTarget	../python/plane_tracker.py	/^TrackedTarget = namedtuple('TrackedTarget', 'target, p0, p1, H, quad')$/;"	kind:variable	line:69
+VideoSynthBase	../python/video.py	/^class VideoSynthBase(object):$/;"	kind:class	line:47
+WHITE	../python/grabcut.py	/^WHITE = [255,255,255]   # sure FG$/;"	kind:variable	line:41
+__init__	../python/camshift.py	/^    def __init__(self, video_src):$/;"	kind:member	line:42
+__init__	../python/common.py	/^    def __init__(self, **kw):$/;"	kind:member	line:26
+__init__	../python/common.py	/^    def __init__(self, smooth_coef = 0.5):$/;"	kind:member	line:155
+__init__	../python/common.py	/^    def __init__(self, win, callback):$/;"	kind:member	line:166
+__init__	../python/common.py	/^    def __init__(self, windowname, dests, colors_func):$/;"	kind:member	line:87
+__init__	../python/demo.py	/^    def __init__(self):$/;"	kind:member	line:68
+__init__	../python/demo.py	/^    def __init__(self, text, url_callback = None):$/;"	kind:member	line:34
+__init__	../python/digits.py	/^    def __init__(self, C = 1, gamma = 0.5):$/;"	kind:member	line:91
+__init__	../python/digits.py	/^    def __init__(self, k = 3):$/;"	kind:member	line:79
+__init__	../python/digits_adjust.py	/^    def __init__(self):$/;"	kind:member	line:54
+__init__	../python/feature_homography.py	/^    def __init__(self, src):$/;"	kind:member	line:40
+__init__	../python/letter_recog.py	/^    def __init__(self):$/;"	kind:member	line:110
+__init__	../python/letter_recog.py	/^    def __init__(self):$/;"	kind:member	line:126
+__init__	../python/letter_recog.py	/^    def __init__(self):$/;"	kind:member	line:63
+__init__	../python/letter_recog.py	/^    def __init__(self):$/;"	kind:member	line:77
+__init__	../python/letter_recog.py	/^    def __init__(self):$/;"	kind:member	line:89
+__init__	../python/lk_homography.py	/^    def __init__(self, video_src):$/;"	kind:member	line:52
+__init__	../python/lk_track.py	/^    def __init__(self, video_src):$/;"	kind:member	line:40
+__init__	../python/mosse.py	/^    def __init__(self, frame, rect):$/;"	kind:member	line:59
+__init__	../python/mosse.py	/^    def __init__(self, video_src, paused = False):$/;"	kind:member	line:148
+__init__	../python/plane_ar.py	/^    def __init__(self, src):$/;"	kind:member	line:45
+__init__	../python/plane_tracker.py	/^    def __init__(self):$/;"	kind:member	line:72
+__init__	../python/plane_tracker.py	/^    def __init__(self, src):$/;"	kind:member	line:142
+__init__	../python/tst_scene_render.py	/^    def __init__(self, bgImg = None, fgImg = None,$/;"	kind:member	line:16
+__init__	../python/video.py	/^    def __init__(self, **kw):$/;"	kind:member	line:110
+__init__	../python/video.py	/^    def __init__(self, **kw):$/;"	kind:member	line:86
+__init__	../python/video.py	/^    def __init__(self, **kw):$/;"	kind:member	line:99
+__init__	../python/video.py	/^    def __init__(self, size=None, noise=0.0, bg = None, **params):$/;"	kind:member	line:48
+__init__	../python/video_threaded.py	/^    def __init__(self, data):$/;"	kind:member	line:32
+__init__	../python/watershed.py	/^    def __init__(self, fn):$/;"	kind:member	line:33
+__str__	../python/common.py	/^    def __str__(self):$/;"	kind:member	line:28
+_click	../python/demo.py	/^    def _click(self, event):$/;"	kind:member	line:57
+_coverage.py	../python/_coverage.py	1;"	kind:file	line:1
+_doc.py	../python/_doc.py	1;"	kind:file	line:1
+_enter	../python/demo.py	/^    def _enter(self, event):$/;"	kind:member	line:53
+_jet_data	../python/common.py	/^_jet_data =   {'red':   ((0., 0, 0), (0.35, 0, 0), (0.66, 1, 1), (0.89,1, 1),$/;"	kind:variable	line:115
+_leave	../python/demo.py	/^    def _leave(self, event):$/;"	kind:member	line:55
+a	../python/houghlines.py	/^                a = math.cos(theta)$/;"	kind:variable	line:44
+a	../python/turing.py	/^        a = (a-a.min()) \/ a.ptp()$/;"	kind:variable	line:65
+a	../python/turing.py	/^    a = np.zeros((h, w), np.float32)$/;"	kind:variable	line:43
+a_lods	../python/turing.py	/^        a_lods = [a]$/;"	kind:variable	line:55
+add	../python/demo.py	/^    def add(self, action):$/;"	kind:member	line:46
+add_link	../python/demo.py	/^        def add_link(start, end, url):$/;"	kind:function	line:148
+add_target	../python/plane_tracker.py	/^    def add_target(self, image, rect, data=None):$/;"	kind:member	line:78
+adjust_KNearest	../python/digits_adjust.py	/^    def adjust_KNearest(self):$/;"	kind:member	line:103
+adjust_SVM	../python/digits_adjust.py	/^    def adjust_SVM(self):$/;"	kind:member	line:73
+affine_detect	../python/asift.py	/^def affine_detect(detector, img, mask=None, pool=None):$/;"	kind:function	line:69
+affine_skew	../python/asift.py	/^def affine_skew(tilt, phi, img, mask=None):$/;"	kind:function	line:37
+angle_cos	../python/squares.py	/^def angle_cos(p0, p1, p2):$/;"	kind:function	line:20
+anorm	../python/common.py	/^def anorm(a):$/;"	kind:function	line:38
+anorm2	../python/common.py	/^def anorm2(a):$/;"	kind:function	line:36
+app	../python/digits_adjust.py	/^    app = App()$/;"	kind:variable	line:134
+ar_edges	../python/plane_ar.py	/^ar_edges = [(0, 1), (1, 2), (2, 3), (3, 0),$/;"	kind:variable	line:39
+ar_verts	../python/plane_ar.py	/^ar_verts = np.float32([[0, 0, 0], [0, 1, 0], [1, 1, 0], [1, 0, 0],$/;"	kind:variable	line:36
+args	../python/calibrate.py	/^    args = dict(args)$/;"	kind:variable	line:34
+args	../python/digits_adjust.py	/^    args = dict(args)$/;"	kind:variable	line:126
+args	../python/letter_recog.py	/^    args = dict(args)$/;"	kind:variable	line:160
+args	../python/mouse_and_match.py	/^    args = parser.parse_args()$/;"	kind:variable	line:63
+args	../python/turing.py	/^    args = dict(args)$/;"	kind:variable	line:36
+args	../python/video.py	/^    args = dict(args)$/;"	kind:variable	line:207
+asift.py	../python/asift.py	1;"	kind:file	line:1
+b	../python/houghlines.py	/^                b = math.sin(theta)$/;"	kind:variable	line:45
+backGr	../python/tst_scene_render.py	/^    backGr = cv2.imread('..\/data\/graf1.png')$/;"	kind:variable	line:101
+bar	../python/grabcut.py	/^            bar = np.zeros((img.shape[0],5,3),np.uint8)$/;"	kind:variable	line:148
+bgdmodel	../python/grabcut.py	/^                bgdmodel = np.zeros((1,65),np.float64)$/;"	kind:variable	line:167
+bgdmodel	../python/grabcut.py	/^                bgdmodel = np.zeros((1,65),np.float64)$/;"	kind:variable	line:172
+bins	../python/hist.py	/^bins = np.arange(256).reshape(256,1)$/;"	kind:variable	line:24
+blockSize	../python/lk_homography.py	/^                       blockSize = 19 )$/;"	kind:variable	line:39
+blockSize	../python/lk_track.py	/^                       blockSize = 7 )$/;"	kind:variable	line:37
+blockSize	../python/stereo_match.py	/^        blockSize = 16,$/;"	kind:variable	line:47
+blur_edge	../python/deconvolution.py	/^def blur_edge(img, d=31):$/;"	kind:function	line:43
+blurred	../line_detection.py	/^blurred = cv2.GaussianBlur(gray, (9, 9), 0)$/;"	kind:variable	line:22
+browse.py	../python/browse.py	1;"	kind:file	line:1
+build_filters	../python/gabor_threads.py	/^def build_filters():$/;"	kind:function	line:25
+build_lappyr	../python/lappyr.py	/^def build_lappyr(img, leveln=6, dtype=np.int16):$/;"	kind:function	line:28
+c	../python/kmeans.py	/^            c = list(map(int, colors[label]))$/;"	kind:variable	line:42
+calc_point	../python/kalman.py	/^            def calc_point(angle):$/;"	kind:function	line:46
+calibrate.py	../python/calibrate.py	1;"	kind:file	line:1
+cam	../python/color_histogram.py	/^    cam = video.create_capture(fn, fallback='synth:bg=..\/data\/baboon.jpg:class=chess:noise=0.05')$/;"	kind:variable	line:42
+cam	../python/mser.py	/^    cam = video.create_capture(video_src)$/;"	kind:variable	line:28
+cam	../python/opt_flow.py	/^    cam = video.create_capture(fn)$/;"	kind:variable	line:66
+camera	../line_detection.py	/^camera = picamera.PiCamera()$/;"	kind:variable	line:8
+camshift.py	../python/camshift.py	1;"	kind:file	line:1
+cap	../python/edge.py	/^    cap = video.create_capture(fn)$/;"	kind:variable	line:41
+cap	../python/lappyr.py	/^    cap = video.create_capture(fn)$/;"	kind:variable	line:55
+cap	../python/video_threaded.py	/^    cap = video.create_capture(fn)$/;"	kind:variable	line:48
+cap	../python/video_v4l2.py	/^cap = cv2.VideoCapture(0)$/;"	kind:variable	line:29
+caps	../python/video.py	/^    caps = list(map(create_capture, sources))$/;"	kind:variable	line:212
+cdst	../python/houghlines.py	/^    cdst = cv2.cvtColor(dst, cv2.COLOR_GRAY2BGR)$/;"	kind:variable	line:29
+ch	../python/color_histogram.py	/^        ch = cv2.waitKey(1)$/;"	kind:variable	line:59
+ch	../python/distrans.py	/^        ch = cv2.waitKey(50)$/;"	kind:variable	line:62
+ch	../python/fitline.py	/^        ch = cv2.waitKey(0)$/;"	kind:variable	line:91
+ch	../python/floodfill.py	/^        ch = cv2.waitKey()$/;"	kind:variable	line:69
+ch	../python/gaussian_mix.py	/^        ch = cv2.waitKey(0)$/;"	kind:variable	line:66
+ch	../python/inpaint.py	/^        ch = cv2.waitKey()$/;"	kind:variable	line:44
+ch	../python/kmeans.py	/^        ch = cv2.waitKey(0)$/;"	kind:variable	line:47
+ch	../python/morphology.py	/^        ch = cv2.waitKey()$/;"	kind:variable	line:82
+ch	../python/opt_flow.py	/^        ch = cv2.waitKey(5)$/;"	kind:variable	line:86
+ch	../python/squares.py	/^        ch = cv2.waitKey()$/;"	kind:variable	line:52
+ch	../python/video.py	/^        ch = cv2.waitKey(1)$/;"	kind:variable	line:220
+checkedTrace	../python/lk_homography.py	/^def checkedTrace(img0, img1, p0, back_threshold = 1.0):$/;"	kind:function	line:41
+cimg	../python/houghcircles.py	/^    cimg = src.copy() # numpy function$/;"	kind:variable	line:29
+circles	../python/houghcircles.py	/^    circles = cv2.HoughCircles(img, cv2.HOUGH_GRADIENT, 1, 10, np.array([]), 100, 30, 1, 30)$/;"	kind:variable	line:31
+class_n	../python/letter_recog.py	/^    class_n = 26$/;"	kind:variable	line:40
+classes	../python/video.py	/^classes = dict(chess=Chess, book=Book, cube=Cube)$/;"	kind:variable	line:157
+clear	../python/plane_tracker.py	/^    def clear(self):$/;"	kind:member	line:93
+clock	../python/common.py	/^def clock():$/;"	kind:function	line:142
+cluster_n	../python/gaussian_mix.py	/^    cluster_n = 5$/;"	kind:variable	line:38
+cluster_n	../python/kmeans.py	/^    cluster_n = 5$/;"	kind:variable	line:22
+cm	../python/distrans.py	/^    cm = make_cmap('jet')$/;"	kind:variable	line:35
+cmap_data	../python/common.py	/^cmap_data = { 'jet' : _jet_data }$/;"	kind:variable	line:122
+code	../python/_coverage.py	/^        code = open(fn).read()$/;"	kind:variable	line:20
+code	../python/kalman.py	/^            code = cv2.waitKey(100)$/;"	kind:variable	line:89
+code	../python/kalman.py	/^    code = long(-1)$/;"	kind:variable	line:31
+coherence.py	../python/coherence.py	1;"	kind:file	line:1
+coherence_filter	../python/coherence.py	/^def coherence_filter(img, sigma = 11, str_sigma = 11, blend = 0.5, iter_n = 4):$/;"	kind:function	line:23
+color	../python/video_v4l2.py	/^color = (0, 255, 0)$/;"	kind:variable	line:27
+color_histogram.py	../python/color_histogram.py	1;"	kind:file	line:1
+colors	../python/kmeans.py	/^    colors = cv2.cvtColor(colors, cv2.COLOR_HSV2BGR)[0]$/;"	kind:variable	line:31
+colors	../python/kmeans.py	/^    colors = np.zeros((1, cluster_n, 3), np.uint8)$/;"	kind:variable	line:28
+colors	../python/stereo_match.py	/^    colors = cv2.cvtColor(imgL, cv2.COLOR_BGR2RGB)$/;"	kind:variable	line:67
+common.py	../python/common.py	1;"	kind:file	line:1
+connectivity	../python/floodfill.py	/^            connectivity = 12-connectivity$/;"	kind:variable	line:77
+connectivity	../python/floodfill.py	/^    connectivity = 4$/;"	kind:variable	line:40
+contours	../python/contours.py	/^    contours = [cv2.approxPolyDP(cnt, 3, True) for cnt in contours0]$/;"	kind:variable	line:58
+contours.py	../python/contours.py	1;"	kind:file	line:1
+convert_rgb	../python/video_v4l2.py	/^        convert_rgb = not convert_rgb$/;"	kind:variable	line:66
+convert_rgb	../python/video_v4l2.py	/^convert_rgb = True$/;"	kind:variable	line:34
+correlate	../python/mosse.py	/^    def correlate(self, img):$/;"	kind:member	line:132
+covs	../python/gaussian_mix.py	/^        covs = em.getCovs()  # Known bug: https:\/\/github.com\/opencv\/opencv\/pull\/4232$/;"	kind:variable	line:53
+create_capture	../python/video.py	/^def create_capture(source = 0, fallback = presets['chess']):$/;"	kind:function	line:168
+criteria	../python/lk_homography.py	/^                  criteria = (cv2.TERM_CRITERIA_EPS | cv2.TERM_CRITERIA_COUNT, 10, 0.03))$/;"	kind:variable	line:34
+criteria	../python/lk_track.py	/^                  criteria = (cv2.TERM_CRITERIA_EPS | cv2.TERM_CRITERIA_COUNT, 10, 0.03))$/;"	kind:variable	line:32
+cross_validate	../python/digits_adjust.py	/^def cross_validate(model_class, params, samples, labels, kfold = 3, pool = None):$/;"	kind:function	line:30
+cur_func_name	../python/fitline.py	/^                cur_func_name = dist_func_names.next()$/;"	kind:variable	line:96
+cur_func_name	../python/fitline.py	/^                cur_func_name = next(dist_func_names)$/;"	kind:variable	line:94
+cur_func_name	../python/fitline.py	/^    cur_func_name = dist_func_names.next()$/;"	kind:variable	line:55
+cur_func_name	../python/fitline.py	/^    cur_func_name = next(dist_func_names)$/;"	kind:variable	line:53
+cur_glitch	../python/opt_flow.py	/^                cur_glitch = img.copy()$/;"	kind:variable	line:95
+cur_glitch	../python/opt_flow.py	/^            cur_glitch = warp_flow(cur_glitch, flow)$/;"	kind:variable	line:83
+cur_glitch	../python/opt_flow.py	/^    cur_glitch = prev.copy()$/;"	kind:variable	line:71
+cur_mode	../python/morphology.py	/^                cur_mode = modes.next()$/;"	kind:variable	line:89
+cur_mode	../python/morphology.py	/^                cur_mode = next(modes)$/;"	kind:variable	line:87
+cur_mode	../python/morphology.py	/^        cur_mode = modes.next()$/;"	kind:variable	line:51
+cur_mode	../python/morphology.py	/^        cur_mode = next(modes)$/;"	kind:variable	line:48
+cur_str_mode	../python/morphology.py	/^                cur_str_mode = next(str_modes)$/;"	kind:variable	line:92
+cur_str_mode	../python/morphology.py	/^                cur_str_mode = str_modes.next()$/;"	kind:variable	line:94
+cur_str_mode	../python/morphology.py	/^        cur_str_mode = next(str_modes)$/;"	kind:variable	line:49
+cur_str_mode	../python/morphology.py	/^        cur_str_mode = str_modes.next()$/;"	kind:variable	line:52
+curve	../python/hist.py	/^            curve = hist_curve(gray)$/;"	kind:variable	line:106
+curve	../python/hist.py	/^            curve = hist_curve(im)$/;"	kind:variable	line:89
+cv2_callable	../python/_coverage.py	/^    cv2_callable = set(['cv2.'+name for name in dir(cv2) if callable( getattr(cv2, name) )])$/;"	kind:variable	line:15
+cv2_unused	../python/_coverage.py	/^    cv2_unused = cv2_callable - cv2_used$/;"	kind:variable	line:24
+cv2_used	../python/_coverage.py	/^    cv2_used = found & cv2_callable$/;"	kind:variable	line:23
+d	../python/texture_flow.py	/^    d = 12$/;"	kind:variable	line:40
+dark	../python/color_histogram.py	/^        dark = hsv[...,2] < 32$/;"	kind:variable	line:51
+debug_dir	../python/calibrate.py	/^    debug_dir = args.get('--debug')$/;"	kind:variable	line:43
+decode_fourcc	../python/video_v4l2.py	/^def decode_fourcc(v):$/;"	kind:function	line:22
+deconvolution.py	../python/deconvolution.py	1;"	kind:file	line:1
+defaultSize	../python/tst_scene_render.py	/^defaultSize = 512$/;"	kind:variable	line:12
+defocus	../python/deconvolution.py	/^    defocus = '--circle' in opts$/;"	kind:variable	line:91
+defocus_kernel	../python/deconvolution.py	/^def defocus_kernel(d, sz=65):$/;"	kind:function	line:61
+demo.py	../python/demo.py	1;"	kind:file	line:1
+deskew	../python/digits.py	/^def deskew(img):$/;"	kind:function	line:63
+detect	../python/facedetect.py	/^def detect(img, cascade):$/;"	kind:function	line:21
+detect_features	../python/plane_tracker.py	/^    def detect_features(self, frame):$/;"	kind:member	line:133
+dft.py	../python/dft.py	1;"	kind:file	line:1
+dft_A	../python/dft.py	/^    dft_A = np.zeros((dft_N, dft_M, 2), dtype=np.float64)$/;"	kind:variable	line:84
+dft_M	../python/dft.py	/^    dft_M = cv2.getOptimalDFTSize(w)$/;"	kind:variable	line:80
+dft_N	../python/dft.py	/^    dft_N = cv2.getOptimalDFTSize(h)$/;"	kind:variable	line:81
+digits.py	../python/digits.py	1;"	kind:file	line:1
+digits2	../python/digits.py	/^    digits2 = list(map(deskew, digits))$/;"	kind:variable	line:162
+digits_adjust.py	../python/digits_adjust.py	1;"	kind:file	line:1
+digits_video.py	../python/digits_video.py	1;"	kind:file	line:1
+disp	../python/stereo_match.py	/^    disp = stereo.compute(imgL, imgR).astype(np.float32) \/ 16.0$/;"	kind:variable	line:57
+disp12MaxDiff	../python/stereo_match.py	/^        disp12MaxDiff = 1,$/;"	kind:variable	line:50
+dist_func_names	../python/fitline.py	/^dist_func_names = it.cycle('DIST_L2 DIST_L1 DIST_L12 DIST_FAIR DIST_WELSCH DIST_HUBER'.split())$/;"	kind:variable	line:50
+distrans.py	../python/distrans.py	1;"	kind:file	line:1
+divSpec	../python/mosse.py	/^def divSpec(A, B):$/;"	kind:function	line:49
+documentation.py	../python/tutorial_code/introduction/documentation/documentation.py	1;"	kind:file	line:1
+drag_start	../python/mouse_and_match.py	/^            drag_start = None$/;"	kind:variable	line:78
+drag_start	../python/mouse_and_match.py	/^drag_start = None$/;"	kind:variable	line:28
+dragging	../python/common.py	/^    def dragging(self):$/;"	kind:member	line:198
+draw	../python/common.py	/^    def draw(self, vis):$/;"	kind:member	line:191
+draw_cross	../python/kalman.py	/^            def draw_cross(center, color, d):$/;"	kind:function	line:66
+draw_detections	../python/peopledetect.py	/^def draw_detections(img, rects, thickness = 1):$/;"	kind:function	line:25
+draw_flow	../python/opt_flow.py	/^def draw_flow(img, flow, step=16):$/;"	kind:function	line:24
+draw_gaussain	../python/gaussian_mix.py	/^def draw_gaussain(img, mean, cov, color):$/;"	kind:function	line:29
+draw_hsv	../python/opt_flow.py	/^def draw_hsv(flow):$/;"	kind:function	line:37
+draw_keypoints	../python/common.py	/^def draw_keypoints(vis, keypoints, color = (0, 255, 255)):$/;"	kind:function	line:234
+draw_overlay	../python/plane_ar.py	/^    def draw_overlay(self, vis, tracked):$/;"	kind:member	line:86
+draw_quads	../python/video.py	/^    def draw_quads(self, img, quads, color = (0, 255, 0)):$/;"	kind:member	line:132
+draw_rects	../python/facedetect.py	/^def draw_rects(img, rects, color):$/;"	kind:function	line:29
+draw_state	../python/mosse.py	/^    def draw_state(self, vis):$/;"	kind:member	line:116
+draw_str	../python/common.py	/^def draw_str(dst, target, s):$/;"	kind:function	line:81
+drawing	../python/grabcut.py	/^            drawing = False$/;"	kind:variable	line:155
+drawing	../python/grabcut.py	/^drawing = False         # flag for drawing curves$/;"	kind:variable	line:50
+dst	../python/calibrate.py	/^        dst = cv2.undistort(img, camera_matrix, dist_coefs, None, newcameramtx)$/;"	kind:variable	line:103
+dst	../python/calibrate.py	/^        dst = dst[y:y+h, x:x+w]$/;"	kind:variable	line:107
+dst	../python/houghlines.py	/^    dst = cv2.Canny(src, 50, 200)$/;"	kind:variable	line:28
+edge.py	../python/edge.py	1;"	kind:file	line:1
+edged	../line_detection.py	/^edged = cv2.Canny(blurred, 50, 150)$/;"	kind:variable	line:25
+eigen	../python/texture_flow.py	/^    eigen = cv2.cornerEigenValsAndVecs(gray, 15, 3)$/;"	kind:variable	line:34
+eigen	../python/texture_flow.py	/^    eigen = eigen.reshape(h, w, 3, 2)  # [[e1, e2], v1, v2]$/;"	kind:variable	line:35
+em	../python/gaussian_mix.py	/^        em = cv2.ml.EM_create()$/;"	kind:variable	line:48
+empty	../python/video.py	/^    empty = 'synth:',$/;"	kind:variable	line:160
+eps	../python/mosse.py	/^eps = 1e-5$/;"	kind:variable	line:56
+equ	../python/hist.py	/^            equ = cv2.equalizeHist(gray)$/;"	kind:variable	line:100
+evaluate_model	../python/digits.py	/^def evaluate_model(model, digits, samples, labels):$/;"	kind:function	line:105
+exclude_list	../python/demo.py	/^exclude_list = ['demo', 'common']$/;"	kind:variable	line:31
+explore_match	../python/find_obj.py	/^def explore_match(win, img1, img2, kp_pairs, status = None, H = None):$/;"	kind:function	line:73
+ext	../python/mouse_and_match.py	/^        ext = os.path.splitext(infile)[1][1:] #get the filename extenstion$/;"	kind:variable	line:70
+f	../python/asift.py	/^    def f(p):$/;"	kind:function	line:84
+f	../python/digits_adjust.py	/^        def f(job):$/;"	kind:function	line:80
+f	../python/digits_adjust.py	/^        def f(k):$/;"	kind:function	line:105
+f	../python/digits_adjust.py	/^    def f(i):$/;"	kind:function	line:33
+f	../python/gabor_threads.py	/^    def f(kern):$/;"	kind:function	line:43
+f	../python/stereo_match.py	/^    f = 0.8*w                          # guess for focal length$/;"	kind:variable	line:61
+facedetect.py	../python/facedetect.py	1;"	kind:file	line:1
+feature_homography.py	../python/feature_homography.py	1;"	kind:file	line:1
+feature_params	../python/lk_homography.py	/^feature_params = dict( maxCorners = 1000,$/;"	kind:variable	line:36
+feature_params	../python/lk_track.py	/^feature_params = dict( maxCorners = 500,$/;"	kind:variable	line:34
+fgdmodel	../python/grabcut.py	/^                fgdmodel = np.zeros((1,65),np.float64)$/;"	kind:variable	line:168
+fgdmodel	../python/grabcut.py	/^                fgdmodel = np.zeros((1,65),np.float64)$/;"	kind:variable	line:173
+fgr	../python/tst_scene_render.py	/^    fgr = cv2.imread('..\/data\/box.png')$/;"	kind:variable	line:102
+filename	../python/grabcut.py	/^        filename = '..\/data\/lena.jpg'$/;"	kind:variable	line:112
+filename	../python/grabcut.py	/^        filename = sys.argv[1] # for drawing purposes$/;"	kind:variable	line:108
+filter_matches	../python/find_obj.py	/^def filter_matches(kp1, kp2, matches, ratio = 0.75):$/;"	kind:function	line:61
+filters	../python/gabor_threads.py	/^    filters = build_filters()$/;"	kind:variable	line:65
+find_obj.py	../python/find_obj.py	1;"	kind:file	line:1
+find_squares	../python/squares.py	/^def find_squares(img):$/;"	kind:function	line:24
+fitline.py	../python/fitline.py	1;"	kind:file	line:1
+fixed_range	../python/floodfill.py	/^            fixed_range = not fixed_range$/;"	kind:variable	line:73
+fixed_range	../python/floodfill.py	/^    fixed_range = True$/;"	kind:variable	line:39
+flann_params	../python/plane_tracker.py	/^flann_params= dict(algorithm = FLANN_INDEX_LSH,$/;"	kind:variable	line:46
+floodfill.py	../python/floodfill.py	1;"	kind:file	line:1
+flow	../python/opt_flow.py	/^        flow = cv2.calcOpticalFlowFarneback(prevgray, gray, None, 0.5, 3, 15, 3, 5, 1.2, 0)$/;"	kind:variable	line:76
+flow	../python/texture_flow.py	/^    flow = eigen[:,:,2]$/;"	kind:variable	line:36
+fn	../python/browse.py	/^        fn = sys.argv[1]$/;"	kind:variable	line:35
+fn	../python/coherence.py	/^        fn = '..\/data\/baboon.jpg'$/;"	kind:variable	line:54
+fn	../python/coherence.py	/^        fn = sys.argv[1]$/;"	kind:variable	line:52
+fn	../python/color_histogram.py	/^        fn = 0$/;"	kind:variable	line:41
+fn	../python/color_histogram.py	/^        fn = sys.argv[1]$/;"	kind:variable	line:39
+fn	../python/deconvolution.py	/^        fn = '..\/data\/licenseplate_motion.jpg'$/;"	kind:variable	line:76
+fn	../python/deconvolution.py	/^        fn = args[0]$/;"	kind:variable	line:74
+fn	../python/distrans.py	/^        fn = '..\/data\/fruits.jpg'$/;"	kind:variable	line:27
+fn	../python/distrans.py	/^        fn = sys.argv[1]$/;"	kind:variable	line:25
+fn	../python/edge.py	/^        fn = 0$/;"	kind:variable	line:32
+fn	../python/edge.py	/^        fn = sys.argv[1]$/;"	kind:variable	line:30
+fn	../python/floodfill.py	/^        fn = '..\/data\/fruits.jpg'$/;"	kind:variable	line:28
+fn	../python/floodfill.py	/^        fn = sys.argv[1]$/;"	kind:variable	line:26
+fn	../python/houghcircles.py	/^        fn = "..\/data\/board.jpg"$/;"	kind:variable	line:24
+fn	../python/houghcircles.py	/^        fn = sys.argv[1]$/;"	kind:variable	line:22
+fn	../python/houghlines.py	/^        fn = "..\/data\/pic1.png"$/;"	kind:variable	line:25
+fn	../python/houghlines.py	/^        fn = sys.argv[1]$/;"	kind:variable	line:23
+fn	../python/inpaint.py	/^        fn = '..\/data\/fruits.jpg'$/;"	kind:variable	line:30
+fn	../python/inpaint.py	/^        fn = sys.argv[1]$/;"	kind:variable	line:28
+fn	../python/lappyr.py	/^        fn = 0$/;"	kind:variable	line:54
+fn	../python/lappyr.py	/^        fn = sys.argv[1]$/;"	kind:variable	line:52
+fn	../python/logpolar.py	/^        fn = '..\/data\/fruits.jpg'$/;"	kind:variable	line:25
+fn	../python/logpolar.py	/^        fn = sys.argv[1]$/;"	kind:variable	line:23
+fn	../python/morphology.py	/^        fn = '..\/data\/baboon.jpg'$/;"	kind:variable	line:34
+fn	../python/morphology.py	/^        fn = sys.argv[1]$/;"	kind:variable	line:32
+fn	../python/opt_flow.py	/^        fn = 0$/;"	kind:variable	line:64
+fn	../python/opt_flow.py	/^        fn = sys.argv[1]$/;"	kind:variable	line:62
+fn	../python/texture_flow.py	/^        fn = '..\/data\/starry_night.jpg'$/;"	kind:variable	line:24
+fn	../python/texture_flow.py	/^        fn = sys.argv[1]$/;"	kind:variable	line:22
+fn	../python/turing.py	/^        fn = args['-o']$/;"	kind:variable	line:39
+fn	../python/video.py	/^                fn = '%s\/shot_%d_%03d.bmp' % (shotdir, i, shot_idx)$/;"	kind:variable	line:225
+fname	../python/hist.py	/^        fname = '..\/data\/lena.jpg'$/;"	kind:variable	line:63
+fname	../python/hist.py	/^        fname = sys.argv[1]$/;"	kind:variable	line:61
+focus	../python/video_v4l2.py	/^focus = int(min(cap.get(cv2.CAP_PROP_FOCUS) * 100, 2**31-1))  # ceil focus to C_LONG as Python3 int can go to +inf$/;"	kind:variable	line:36
+font	../python/video_v4l2.py	/^font = cv2.FONT_HERSHEY_SIMPLEX$/;"	kind:variable	line:26
+format_text	../python/demo.py	/^    def format_text(self, s):$/;"	kind:member	line:134
+found	../python/_coverage.py	/^    found = set()$/;"	kind:variable	line:17
+found_distrs	../python/gaussian_mix.py	/^        found_distrs = zip(means, covs)$/;"	kind:variable	line:54
+fourcc	../python/video_v4l2.py	/^    fourcc = decode_fourcc(cap.get(cv2.CAP_PROP_FOURCC))$/;"	kind:variable	line:44
+fps	../python/video_v4l2.py	/^    fps = cap.get(cv2.CAP_PROP_FPS)$/;"	kind:variable	line:46
+fps	../python/video_v4l2.py	/^fps = int(cap.get(cv2.CAP_PROP_FPS))$/;"	kind:variable	line:35
+frame_interval	../python/video_threaded.py	/^    frame_interval = StatValue()$/;"	kind:variable	line:64
+gabor_threads.py	../python/gabor_threads.py	1;"	kind:file	line:1
+gaussian_mix.py	../python/gaussian_mix.py	1;"	kind:file	line:1
+get	../python/video_threaded.py	/^    def get(self):$/;"	kind:member	line:36
+getCurrentRect	../python/tst_scene_render.py	/^    def getCurrentRect(self):$/;"	kind:member	line:65
+getNextFrame	../python/tst_scene_render.py	/^    def getNextFrame(self):$/;"	kind:member	line:79
+getRectInTime	../python/tst_scene_render.py	/^    def getRectInTime(self, time):$/;"	kind:member	line:53
+getXOffset	../python/tst_scene_render.py	/^    def getXOffset(self, time):$/;"	kind:member	line:43
+getYOffset	../python/tst_scene_render.py	/^    def getYOffset(self, time):$/;"	kind:member	line:47
+get_colors	../python/watershed.py	/^    def get_colors(self):$/;"	kind:member	line:47
+get_dataset	../python/digits_adjust.py	/^    def get_dataset(self):$/;"	kind:member	line:65
+getsize	../python/common.py	/^def getsize(img):$/;"	kind:function	line:227
+grabcut.py	../python/grabcut.py	1;"	kind:file	line:1
+gray	../line_detection.py	/^gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)$/;"	kind:variable	line:19
+gray	../python/hist.py	/^    gray = cv2.cvtColor(im,cv2.COLOR_BGR2GRAY)$/;"	kind:variable	line:72
+gray	../python/mouse_and_match.py	/^            gray=cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)$/;"	kind:variable	line:79
+gray	../python/mser.py	/^        gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)$/;"	kind:variable	line:35
+gray	../python/opt_flow.py	/^        gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)$/;"	kind:variable	line:75
+gray	../python/texture_flow.py	/^    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)$/;"	kind:variable	line:31
+green	../python/lk_homography.py	/^green = (0, 255, 0)$/;"	kind:variable	line:48
+grouper	../python/common.py	/^def grouper(n, iterable, fillvalue=None):$/;"	kind:function	line:202
+h	../python/color_histogram.py	/^        h = cv2.calcHist([hsv], [0, 1], None, [180, 256], [0, 180, 0, 256])$/;"	kind:variable	line:53
+h	../python/color_histogram.py	/^        h = np.clip(h*0.005*hist_scale, 0, 1)$/;"	kind:variable	line:55
+hist.py	../python/hist.py	1;"	kind:file	line:1
+hist_curve	../python/hist.py	/^def hist_curve(im):$/;"	kind:function	line:26
+hist_lines	../python/hist.py	/^def hist_lines(im):$/;"	kind:function	line:41
+hist_scale	../python/color_histogram.py	/^    hist_scale = 10$/;"	kind:variable	line:31
+homotrans	../python/common.py	/^def homotrans(H, x, y):$/;"	kind:function	line:41
+houghcircles.py	../python/houghcircles.py	1;"	kind:file	line:1
+houghlines.py	../python/houghlines.py	1;"	kind:file	line:1
+hsv	../python/color_histogram.py	/^        hsv = cv2.cvtColor(small, cv2.COLOR_BGR2HSV)$/;"	kind:variable	line:50
+hsv_map	../python/color_histogram.py	/^    hsv_map = cv2.cvtColor(hsv_map, cv2.COLOR_HSV2BGR)$/;"	kind:variable	line:27
+hsv_map	../python/color_histogram.py	/^    hsv_map = np.zeros((180, 256, 3), np.uint8)$/;"	kind:variable	line:22
+hulls	../python/mser.py	/^        hulls = [cv2.convexHull(p.reshape(-1, 1, 2)) for p in regions]$/;"	kind:variable	line:39
+im	../python/dft.py	/^        im = cv2.imread('..\/data\/baboon.jpg')$/;"	kind:variable	line:70
+im	../python/dft.py	/^        im = cv2.imread(sys.argv[1])$/;"	kind:variable	line:68
+im	../python/dft.py	/^    im = cv2.cvtColor(im, cv2.COLOR_BGR2GRAY)$/;"	kind:variable	line:74
+im	../python/hist.py	/^    im = cv2.imread(fname)$/;"	kind:variable	line:66
+image_extensions	../python/common.py	/^image_extensions = ['.bmp', '.jpg', '.jpeg', '.png', '.tif', '.tiff', '.pbm', '.pgm', '.ppm']$/;"	kind:variable	line:23
+img	../line_detection.py	/^img = rawCapture.array$/;"	kind:variable	line:16
+img	../python/browse.py	/^        img = cv2.imread(fn)$/;"	kind:variable	line:37
+img	../python/browse.py	/^        img = np.zeros((sz, sz), np.uint8)$/;"	kind:variable	line:45
+img	../python/calibrate.py	/^        img = cv2.imread(fn, 0)$/;"	kind:variable	line:59
+img	../python/calibrate.py	/^        img = cv2.imread(img_found)$/;"	kind:variable	line:98
+img	../python/contours.py	/^    img = make_image()$/;"	kind:variable	line:54
+img	../python/deconvolution.py	/^    img = blur_edge(img)$/;"	kind:variable	line:88
+img	../python/deconvolution.py	/^    img = cv2.imread(fn, 0)$/;"	kind:variable	line:80
+img	../python/deconvolution.py	/^    img = np.float32(img)\/255.0$/;"	kind:variable	line:85
+img	../python/distrans.py	/^    img = cv2.imread(fn, 0)$/;"	kind:variable	line:30
+img	../python/floodfill.py	/^    img = cv2.imread(fn, True)$/;"	kind:variable	line:31
+img	../python/gabor_threads.py	/^    img = cv2.imread(img_fn)$/;"	kind:variable	line:60
+img	../python/gaussian_mix.py	/^        img = np.zeros((img_size, img_size, 3), np.uint8)$/;"	kind:variable	line:57
+img	../python/grabcut.py	/^            img = img2.copy()$/;"	kind:variable	line:160
+img	../python/grabcut.py	/^    img = cv2.imread(filename)$/;"	kind:variable	line:114
+img	../python/houghcircles.py	/^    img = cv2.cvtColor(src, cv2.COLOR_BGR2GRAY)$/;"	kind:variable	line:27
+img	../python/houghcircles.py	/^    img = cv2.medianBlur(img, 5)$/;"	kind:variable	line:28
+img	../python/inpaint.py	/^    img = cv2.imread(fn)$/;"	kind:variable	line:34
+img	../python/kalman.py	/^            img = np.zeros((img_height, img_width, 3), np.uint8)$/;"	kind:variable	line:74
+img	../python/kmeans.py	/^        img = np.zeros((img_size, img_size, 3), np.uint8)$/;"	kind:variable	line:40
+img	../python/logpolar.py	/^    img = cv2.imread(fn)$/;"	kind:variable	line:27
+img	../python/morphology.py	/^    img = cv2.imread(fn)$/;"	kind:variable	line:36
+img	../python/mouse_and_match.py	/^            img=cv2.imread(infile,1)$/;"	kind:variable	line:74
+img	../python/squares.py	/^        img = cv2.imread(fn)$/;"	kind:variable	line:48
+img	../python/texture_flow.py	/^    img = cv2.imread(fn)$/;"	kind:variable	line:26
+img	../python/video_v4l2.py	/^            img = cv2.cvtColor(img, cv2.COLOR_YUV2GRAY_YUYV)$/;"	kind:variable	line:52
+img	../python/video_v4l2.py	/^            img = cv2.imdecode(img, cv2.IMREAD_GRAYSCALE)$/;"	kind:variable	line:50
+img2	../python/grabcut.py	/^    img2 = img.copy()                               # a copy of original image$/;"	kind:variable	line:115
+img2	../python/logpolar.py	/^    img2 = cv2.logPolar(img, (img.shape[0]\/2, img.shape[1]\/2), 40, cv2.WARP_FILL_OUTLIERS)$/;"	kind:variable	line:32
+img3	../python/logpolar.py	/^    img3 = cv2.linearPolar(img, (img.shape[0]\/2, img.shape[1]\/2), 40, cv2.WARP_FILL_OUTLIERS)$/;"	kind:variable	line:33
+imgL	../python/stereo_match.py	/^    imgL = cv2.pyrDown( cv2.imread('..\/data\/aloeL.jpg') )  # downscale images for faster processing$/;"	kind:variable	line:38
+imgR	../python/stereo_match.py	/^    imgR = cv2.pyrDown( cv2.imread('..\/data\/aloeR.jpg') )$/;"	kind:variable	line:39
+img_height	../python/kalman.py	/^    img_height = 500$/;"	kind:variable	line:27
+img_mark	../python/inpaint.py	/^    img_mark = img.copy()$/;"	kind:variable	line:39
+img_mask	../python/calibrate.py	/^        img_mask = '..\/data\/left*.jpg'  # default$/;"	kind:variable	line:38
+img_mask	../python/calibrate.py	/^        img_mask = img_mask[0]$/;"	kind:variable	line:40
+img_names	../python/calibrate.py	/^    img_names = glob(img_mask)$/;"	kind:variable	line:42
+img_names_undistort	../python/calibrate.py	/^    img_names_undistort = []$/;"	kind:variable	line:56
+img_points	../python/calibrate.py	/^    img_points = []$/;"	kind:variable	line:54
+img_size	../python/gaussian_mix.py	/^    img_size = 512$/;"	kind:variable	line:39
+img_size	../python/kmeans.py	/^    img_size = 512$/;"	kind:variable	line:23
+img_width	../python/kalman.py	/^    img_width = 500$/;"	kind:variable	line:28
+imgs	../python/video.py	/^        imgs = []$/;"	kind:variable	line:215
+init_feature	../python/find_obj.py	/^def init_feature(name):$/;"	kind:function	line:28
+inpaint.py	../python/inpaint.py	1;"	kind:file	line:1
+inside	../python/peopledetect.py	/^def inside(r, q):$/;"	kind:function	line:19
+invalidate	../python/distrans.py	/^    def invalidate(dummy=None):$/;"	kind:function	line:52
+isOpened	../python/video.py	/^    def isOpened(self):$/;"	kind:member	line:82
+k	../python/grabcut.py	/^        k = cv2.waitKey(1)$/;"	kind:variable	line:132
+k	../python/hist.py	/^        k = cv2.waitKey(0)$/;"	kind:variable	line:87
+k	../python/video_v4l2.py	/^    k = cv2.waitKey(1)$/;"	kind:variable	line:61
+kalman	../python/kalman.py	/^    kalman = cv2.KalmanFilter(2, 1, 0)$/;"	kind:variable	line:29
+kalman.py	../python/kalman.py	1;"	kind:file	line:1
+kernel	../python/tutorial_code/core/mat_mask_operations/mat_mask_operations.py	/^kernel = np.array([ [0,-1,0],$/;"	kind:variable	line:42
+key_size	../python/plane_tracker.py	/^                   key_size = 12,     # 20$/;"	kind:variable	line:48
+kmeans.py	../python/kmeans.py	1;"	kind:file	line:1
+lappyr.py	../python/lappyr.py	1;"	kind:file	line:1
+last_frame_time	../python/video_threaded.py	/^    last_frame_time = clock()$/;"	kind:variable	line:65
+latency	../python/video_threaded.py	/^    latency = StatValue()$/;"	kind:variable	line:63
+letter_recog.py	../python/letter_recog.py	1;"	kind:file	line:1
+leveln	../python/lappyr.py	/^    leveln = 6$/;"	kind:variable	line:57
+line_detection.py	../line_detection.py	1;"	kind:file	line:1
+lines	../line_detection.py	/^lines = cv2.HoughLinesP(edged,1,np.pi\/180,10,80,1)$/;"	kind:variable	line:28
+lines	../python/hist.py	/^            lines = hist_lines(equ)$/;"	kind:variable	line:101
+lines	../python/hist.py	/^            lines = hist_lines(im)$/;"	kind:variable	line:95
+lines	../python/hist.py	/^            lines = hist_lines(norm)$/;"	kind:variable	line:112
+lines	../python/houghlines.py	/^        lines = cv2.HoughLines(dst, 1, math.pi\/180.0, 50, np.array([]), 0, 0)$/;"	kind:variable	line:38
+lines	../python/houghlines.py	/^        lines = cv2.HoughLinesP(dst, 1, math.pi\/180.0, 40, np.array([]), 50, 10)$/;"	kind:variable	line:32
+lk_homography.py	../python/lk_homography.py	1;"	kind:file	line:1
+lk_params	../python/lk_homography.py	/^lk_params = dict( winSize  = (19, 19),$/;"	kind:variable	line:32
+lk_params	../python/lk_track.py	/^lk_params = dict( winSize  = (15, 15),$/;"	kind:variable	line:30
+lk_track.py	../python/lk_track.py	1;"	kind:file	line:1
+load	../python/digits.py	/^    def load(self, fn):$/;"	kind:member	line:73
+load	../python/letter_recog.py	/^    def load(self, fn):$/;"	kind:member	line:43
+load_base	../python/letter_recog.py	/^def load_base(fn):$/;"	kind:function	line:34
+load_digits	../python/digits.py	/^def load_digits(fn):$/;"	kind:function	line:56
+loc	../python/_doc.py	/^        loc = {}$/;"	kind:variable	line:18
+log_spectrum	../python/dft.py	/^    log_spectrum = cv2.log(1.0 + magnitude)$/;"	kind:variable	line:100
+logpolar.py	../python/logpolar.py	1;"	kind:file	line:1
+long	../python/kalman.py	/^    long = int$/;"	kind:variable	line:19
+lookat	../python/common.py	/^def lookat(eye, target, up = (0, 0, 1)):$/;"	kind:function	line:63
+magnitude	../python/dft.py	/^    magnitude = cv2.sqrt(image_Re**2.0 + image_Im**2.0)$/;"	kind:variable	line:97
+main	../python/digits_video.py	/^def main():$/;"	kind:function	line:19
+main	../python/lk_homography.py	/^def main():$/;"	kind:function	line:108
+main	../python/lk_track.py	/^def main():$/;"	kind:function	line:92
+make_cmap	../python/common.py	/^def make_cmap(name, n=256):$/;"	kind:function	line:124
+make_gaussians	../python/gaussian_mix.py	/^def make_gaussians(cluster_n, img_size):$/;"	kind:function	line:15
+make_image	../python/contours.py	/^def make_image():$/;"	kind:function	line:23
+mark	../python/inpaint.py	/^    mark = np.zeros(img.shape[:2], np.uint8)$/;"	kind:variable	line:40
+mask	../python/floodfill.py	/^    mask = np.zeros((h+2, w+2), np.uint8)$/;"	kind:variable	line:37
+mask	../python/grabcut.py	/^            mask = np.zeros(img.shape[:2],dtype = np.uint8) # mask initialized to PR_BG$/;"	kind:variable	line:161
+mask	../python/grabcut.py	/^    mask = np.zeros(img.shape[:2],dtype = np.uint8) # mask initialized to PR_BG$/;"	kind:variable	line:116
+mask	../python/stereo_match.py	/^    mask = disp > disp.min()$/;"	kind:variable	line:68
+mask2	../python/grabcut.py	/^        mask2 = np.where((mask==1) + (mask==3),255,0).astype('uint8')$/;"	kind:variable	line:176
+mat_mask_operations.py	../python/tutorial_code/core/mat_mask_operations/mat_mask_operations.py	1;"	kind:file	line:1
+match_and_draw	../python/asift.py	/^    def match_and_draw(win):$/;"	kind:function	line:145
+match_and_draw	../python/find_obj.py	/^    def match_and_draw(win):$/;"	kind:function	line:175
+match_text	../python/demo.py	/^    def match_text(self, pattern, tag_proc, regexp=True):$/;"	kind:member	line:153
+maxLevel	../python/lk_homography.py	/^                  maxLevel = 2,$/;"	kind:variable	line:33
+maxLevel	../python/lk_track.py	/^                  maxLevel = 2,$/;"	kind:variable	line:31
+mdot	../python/common.py	/^def mdot(*args):$/;"	kind:function	line:231
+means	../python/gaussian_mix.py	/^        means = em.getMeans()$/;"	kind:variable	line:52
+measurement	../python/kalman.py	/^            measurement = kalman.measurementNoiseCov * np.random.randn(1, 1)$/;"	kind:variable	line:57
+measurement	../python/kalman.py	/^            measurement = np.dot(kalman.measurementMatrix, state) + measurement$/;"	kind:variable	line:60
+measurement_angle	../python/kalman.py	/^            measurement_angle = measurement[0, 0]$/;"	kind:variable	line:62
+measurement_pt	../python/kalman.py	/^            measurement_pt = calc_point(measurement_angle)$/;"	kind:variable	line:63
+merge_lappyr	../python/lappyr.py	/^def merge_lappyr(levels):$/;"	kind:function	line:39
+mi	../python/turing.py	/^        mi = np.argmin(vs, 0)$/;"	kind:variable	line:63
+minDistance	../python/lk_homography.py	/^                       minDistance = 8,$/;"	kind:variable	line:38
+minDistance	../python/lk_track.py	/^                       minDistance = 7,$/;"	kind:variable	line:36
+min_disp	../python/stereo_match.py	/^    min_disp = 16$/;"	kind:variable	line:43
+model	../python/digits.py	/^    model = KNearest(k=4)$/;"	kind:variable	line:173
+model	../python/digits.py	/^    model = SVM(C=2.67, gamma=5.383)$/;"	kind:variable	line:179
+model	../python/letter_recog.py	/^    model = Model()$/;"	kind:variable	line:167
+models	../python/letter_recog.py	/^    models = [RTrees, KNearest, Boost, SVM, MLP] # NBayes$/;"	kind:variable	line:155
+models	../python/letter_recog.py	/^    models = dict( [(cls.__name__.lower(), cls) for cls in models] )$/;"	kind:variable	line:156
+modes	../python/morphology.py	/^    modes = cycle(['erode\/dilate', 'open\/close', 'blackhat\/tophat', 'gradient'])$/;"	kind:variable	line:44
+morphology.py	../python/morphology.py	1;"	kind:file	line:1
+mosaic	../python/common.py	/^def mosaic(w, imgs):$/;"	kind:function	line:211
+mosse.py	../python/mosse.py	1;"	kind:file	line:1
+motion_kernel	../python/deconvolution.py	/^def motion_kernel(angle, d, sz=65):$/;"	kind:function	line:52
+mouse_and_match.py	../python/mouse_and_match.py	1;"	kind:file	line:1
+mser	../python/mser.py	/^    mser = cv2.MSER_create()$/;"	kind:variable	line:29
+mser.py	../python/mser.py	1;"	kind:file	line:1
+mtx2rvec	../python/common.py	/^def mtx2rvec(R):$/;"	kind:function	line:73
+multi_probe_level	../python/plane_tracker.py	/^                   multi_probe_level = 1) #2$/;"	kind:variable	line:49
+need_update	../python/distrans.py	/^    need_update = True$/;"	kind:variable	line:36
+norm	../python/hist.py	/^            norm = cv2.normalize(gray, gray, alpha = 0,beta = 255,norm_type = cv2.NORM_MINMAX)$/;"	kind:variable	line:111
+nothing	../python/coherence.py	/^    def nothing(*argv):$/;"	kind:function	line:58
+nothing	../python/common.py	/^def nothing(*arg, **kw):$/;"	kind:function	line:139
+nothing	../python/edge.py	/^    def nothing(*arg):$/;"	kind:function	line:34
+numDisparities	../python/stereo_match.py	/^        numDisparities = num_disp,$/;"	kind:variable	line:46
+num_disp	../python/stereo_match.py	/^    num_disp = 112-min_disp$/;"	kind:variable	line:44
+obj_points	../python/calibrate.py	/^    obj_points = []$/;"	kind:variable	line:53
+on_demo_select	../python/demo.py	/^    def on_demo_select(self, evt):$/;"	kind:member	line:115
+on_link	../python/demo.py	/^    def on_link(self, url):$/;"	kind:member	line:111
+on_mouse	../python/common.py	/^    def on_mouse(self, event, x, y, flags, param):$/;"	kind:member	line:99
+on_rect	../python/feature_homography.py	/^    def on_rect(self, rect):$/;"	kind:member	line:49
+on_rect	../python/plane_ar.py	/^    def on_rect(self, rect):$/;"	kind:member	line:55
+on_rect	../python/plane_tracker.py	/^    def on_rect(self, rect):$/;"	kind:member	line:151
+on_run	../python/demo.py	/^    def on_run(self, *args):$/;"	kind:member	line:168
+onmouse	../python/browse.py	/^    def onmouse(event, x, y, flags, param):$/;"	kind:function	line:55
+onmouse	../python/camshift.py	/^    def onmouse(self, event, x, y, flags, param):$/;"	kind:member	line:53
+onmouse	../python/common.py	/^    def onmouse(self, event, x, y, flags, param):$/;"	kind:member	line:172
+onmouse	../python/find_obj.py	/^    def onmouse(event, x, y, flags, param):$/;"	kind:function	line:117
+onmouse	../python/floodfill.py	/^    def onmouse(event, x, y, flags, param):$/;"	kind:function	line:57
+onmouse	../python/grabcut.py	/^def onmouse(event,x,y,flags,param):$/;"	kind:function	line:57
+onmouse	../python/mouse_and_match.py	/^def onmouse(event, x, y, flags, param):$/;"	kind:function	line:31
+onrect	../python/mosse.py	/^    def onrect(self, rect):$/;"	kind:member	line:156
+opencv_version.py	../python/opencv_version.py	1;"	kind:file	line:1
+opt_flow.py	../python/opt_flow.py	1;"	kind:file	line:1
+opts	../python/deconvolution.py	/^    opts = dict(opts)$/;"	kind:variable	line:72
+opts	../python/mosse.py	/^    opts = dict(opts)$/;"	kind:variable	line:192
+out	../python/turing.py	/^        out = cv2.VideoWriter(args['-o'], cv2.VideoWriter_fourcc(*'DIB '), 30.0, (w, h), False)$/;"	kind:variable	line:40
+out	../python/turing.py	/^    out = None$/;"	kind:variable	line:37
+out_colors	../python/stereo_match.py	/^    out_colors = colors[mask]$/;"	kind:variable	line:70
+out_fn	../python/stereo_match.py	/^    out_fn = 'out.ply'$/;"	kind:variable	line:71
+out_points	../python/stereo_match.py	/^    out_points = points[mask]$/;"	kind:variable	line:69
+outfile	../python/calibrate.py	/^            outfile = debug_dir + name + '_chess.png'$/;"	kind:variable	line:74
+outfile	../python/calibrate.py	/^        outfile = img_found + '_undistorted.png'$/;"	kind:variable	line:108
+output	../python/grabcut.py	/^            output = np.zeros(img.shape,np.uint8)           # output image to be shown$/;"	kind:variable	line:162
+output	../python/grabcut.py	/^        output = cv2.bitwise_and(img2,img2,mask=mask2)$/;"	kind:variable	line:177
+output	../python/grabcut.py	/^    output = np.zeros(img.shape,np.uint8)           # output image to be shown$/;"	kind:variable	line:117
+param	../python/opencv_version.py	/^        param = ""$/;"	kind:variable	line:25
+param	../python/opencv_version.py	/^        param = sys.argv[1]$/;"	kind:variable	line:23
+parser	../python/mouse_and_match.py	/^    parser = argparse.ArgumentParser(description='Demonstrate mouse interaction with images')$/;"	kind:variable	line:61
+path	../python/mouse_and_match.py	/^    path = args.input$/;"	kind:variable	line:64
+pattern_points	../python/calibrate.py	/^    pattern_points = np.zeros((np.prod(pattern_size), 3), np.float32)$/;"	kind:variable	line:49
+pattern_size	../python/calibrate.py	/^    pattern_size = (9, 6)$/;"	kind:variable	line:48
+pending	../python/video_threaded.py	/^    pending = deque()$/;"	kind:variable	line:59
+peopledetect.py	../python/peopledetect.py	1;"	kind:file	line:1
+plane_ar.py	../python/plane_ar.py	1;"	kind:file	line:1
+plane_tracker.py	../python/plane_tracker.py	1;"	kind:file	line:1
+points	../python/stereo_match.py	/^    points = cv2.reprojectImageTo3D(disp, Q)$/;"	kind:variable	line:66
+points	../python/texture_flow.py	/^    points =  np.dstack( np.mgrid[d\/2:w:d, d\/2:h:d] ).reshape(-1, 2)$/;"	kind:variable	line:41
+pool	../python/video_threaded.py	/^    pool = ThreadPool(processes = threadn)$/;"	kind:variable	line:58
+predict	../python/digits.py	/^    def predict(self, samples):$/;"	kind:member	line:101
+predict	../python/digits.py	/^    def predict(self, samples):$/;"	kind:member	line:86
+predict	../python/letter_recog.py	/^    def predict(self, samples):$/;"	kind:member	line:102
+predict	../python/letter_recog.py	/^    def predict(self, samples):$/;"	kind:member	line:120
+predict	../python/letter_recog.py	/^    def predict(self, samples):$/;"	kind:member	line:143
+predict	../python/letter_recog.py	/^    def predict(self, samples):$/;"	kind:member	line:71
+predict	../python/letter_recog.py	/^    def predict(self, samples):$/;"	kind:member	line:83
+predict_angle	../python/kalman.py	/^            predict_angle = prediction[0, 0]$/;"	kind:variable	line:54
+predict_pt	../python/kalman.py	/^            predict_pt = calc_point(predict_angle)$/;"	kind:variable	line:55
+prediction	../python/kalman.py	/^            prediction = kalman.predict()$/;"	kind:variable	line:53
+preprocess	../python/digits_adjust.py	/^    def preprocess(self):$/;"	kind:member	line:57
+preprocess	../python/mosse.py	/^    def preprocess(self, img):$/;"	kind:member	line:127
+preprocess_hog	../python/digits.py	/^def preprocess_hog(digits):$/;"	kind:function	line:128
+preprocess_simple	../python/digits.py	/^def preprocess_simple(digits):$/;"	kind:function	line:125
+presets	../python/video.py	/^presets = dict($/;"	kind:variable	line:159
+prevgray	../python/opt_flow.py	/^        prevgray = gray$/;"	kind:variable	line:77
+prevgray	../python/opt_flow.py	/^    prevgray = cv2.cvtColor(prev, cv2.COLOR_BGR2GRAY)$/;"	kind:variable	line:68
+process	../python/gabor_threads.py	/^def process(img, filters):$/;"	kind:function	line:34
+process_frame	../python/video_threaded.py	/^    def process_frame(frame, t0):$/;"	kind:function	line:51
+process_noise	../python/kalman.py	/^            process_noise = sqrt(kalman.processNoiseCov[0,0]) * np.random.randn(2, 1)$/;"	kind:variable	line:84
+process_scale	../python/turing.py	/^    def process_scale(a_lods, lod):$/;"	kind:function	line:46
+process_threaded	../python/gabor_threads.py	/^def process_threaded(img, filters, threadn = 8):$/;"	kind:function	line:41
+pt1	../python/houghlines.py	/^                pt1 = ( int(x0+1000*(-b)), int(y0+1000*(a)) )$/;"	kind:variable	line:47
+pt2	../python/houghlines.py	/^                pt2 = ( int(x0-1000*(-b)), int(y0-1000*(a)) )$/;"	kind:variable	line:48
+pyr	../python/lappyr.py	/^        pyr = build_lappyr(frame, leveln)$/;"	kind:variable	line:65
+qualityLevel	../python/lk_homography.py	/^                       qualityLevel = 0.01,$/;"	kind:variable	line:37
+qualityLevel	../python/lk_track.py	/^                       qualityLevel = 0.3,$/;"	kind:variable	line:35
+r	../python/_coverage.py	/^    r = 1.0 * len(cv2_used) \/ len(cv2_callable)$/;"	kind:variable	line:28
+rand	../python/digits.py	/^    rand = np.random.RandomState(321)$/;"	kind:variable	line:158
+rawCapture	../line_detection.py	/^rawCapture = picamera.array.PiRGBArray(camera)$/;"	kind:variable	line:10
+read	../python/video.py	/^    def read(self, dst=None):$/;"	kind:member	line:103
+read	../python/video.py	/^    def read(self, dst=None):$/;"	kind:member	line:66
+read	../python/video.py	/^    def read(self, dst=None):$/;"	kind:member	line:92
+ready	../python/video_threaded.py	/^    def ready(self):$/;"	kind:member	line:34
+realInput	../python/dft.py	/^    realInput = im.astype(np.float64)$/;"	kind:variable	line:77
+rect	../python/grabcut.py	/^            rect = (0,0,1,1)$/;"	kind:variable	line:154
+rect	../python/grabcut.py	/^rect = (0,0,1,1)$/;"	kind:variable	line:49
+rect2rect_mtx	../python/common.py	/^def rect2rect_mtx(src, dst):$/;"	kind:function	line:53
+rect_or_mask	../python/grabcut.py	/^                rect_or_mask = 1$/;"	kind:variable	line:170
+rect_or_mask	../python/grabcut.py	/^            rect_or_mask = 100$/;"	kind:variable	line:157
+rect_or_mask	../python/grabcut.py	/^rect_or_mask = 100      # flag for selecting rect or mask mode$/;"	kind:variable	line:53
+rect_over	../python/grabcut.py	/^            rect_over = False$/;"	kind:variable	line:158
+rect_over	../python/grabcut.py	/^rect_over = False       # flag to check if rect drawn$/;"	kind:variable	line:52
+rectangle	../python/grabcut.py	/^            rectangle = False$/;"	kind:variable	line:156
+rectangle	../python/grabcut.py	/^rectangle = False       # flag for drawing rect$/;"	kind:variable	line:51
+red	../python/lk_homography.py	/^red = (0, 0, 255)$/;"	kind:variable	line:49
+render	../python/tst_scene_render.py	/^    render = TestSceneRender(backGr, fgr)$/;"	kind:variable	line:104
+render	../python/video.py	/^    def render(self, dst):$/;"	kind:member	line:138
+render	../python/video.py	/^    def render(self, dst):$/;"	kind:member	line:63
+res	../python/grabcut.py	/^            res = np.hstack((img2,bar,img,bar,output))$/;"	kind:variable	line:149
+res	../python/inpaint.py	/^            res = cv2.inpaint(img_mark, mark, 3, cv2.INPAINT_TELEA)$/;"	kind:variable	line:48
+res	../python/lappyr.py	/^        res = merge_lappyr(pyr)$/;"	kind:variable	line:69
+reset	../python/demo.py	/^    def reset(self):$/;"	kind:member	line:44
+resetTime	../python/tst_scene_render.py	/^    def resetTime(self):$/;"	kind:member	line:95
+rho	../python/houghlines.py	/^                rho = lines[i][0][0]$/;"	kind:variable	line:42
+rnd_warp	../python/mosse.py	/^def rnd_warp(a):$/;"	kind:function	line:37
+run	../python/camshift.py	/^    def run(self):$/;"	kind:member	line:77
+run	../python/demo.py	/^    def run(self):$/;"	kind:member	line:173
+run	../python/feature_homography.py	/^    def run(self):$/;"	kind:member	line:53
+run	../python/lk_homography.py	/^    def run(self):$/;"	kind:member	line:57
+run	../python/lk_track.py	/^    def run(self):$/;"	kind:member	line:47
+run	../python/mosse.py	/^    def run(self):$/;"	kind:member	line:161
+run	../python/plane_ar.py	/^    def run(self):$/;"	kind:member	line:58
+run	../python/plane_tracker.py	/^    def run(self):$/;"	kind:member	line:154
+run	../python/watershed.py	/^    def run(self):$/;"	kind:member	line:57
+run_jobs	../python/digits_adjust.py	/^    def run_jobs(self, f, jobs):$/;"	kind:member	line:68
+sample_line	../python/fitline.py	/^def sample_line(p1, p2, n, noise=0.0):$/;"	kind:function	line:45
+samples	../python/digits.py	/^    samples = preprocess_hog(digits2)$/;"	kind:variable	line:163
+save	../python/digits.py	/^    def save(self, fn):$/;"	kind:member	line:75
+save	../python/letter_recog.py	/^    def save(self, fn):$/;"	kind:member	line:45
+scale_num	../python/turing.py	/^    scale_num = 6$/;"	kind:variable	line:53
+seed_pt	../python/floodfill.py	/^    seed_pt = None$/;"	kind:variable	line:38
+sel	../python/mouse_and_match.py	/^            sel = (0,0,0,0)$/;"	kind:variable	line:77
+sel	../python/mouse_and_match.py	/^sel = (0,0,0,0)$/;"	kind:variable	line:29
+setInitialRect	../python/tst_scene_render.py	/^    def setInitialRect(self, rect):$/;"	kind:member	line:50
+set_scale	../python/color_histogram.py	/^    def set_scale(val):$/;"	kind:function	line:33
+sharpen	../python/tutorial_code/core/mat_mask_operations/mat_mask_operations.py	/^def sharpen(my_image):$/;"	kind:function	line:5
+shift_dft	../python/dft.py	/^def shift_dft(src, dst=None):$/;"	kind:function	line:19
+shot_idx	../python/video.py	/^    shot_idx = 0$/;"	kind:variable	line:213
+shotdir	../python/video.py	/^    shotdir = args.get('--shotdir', '.')$/;"	kind:variable	line:208
+show	../python/common.py	/^    def show(self):$/;"	kind:member	line:96
+show_glitch	../python/opt_flow.py	/^            show_glitch = not show_glitch$/;"	kind:variable	line:93
+show_glitch	../python/opt_flow.py	/^    show_glitch = False$/;"	kind:variable	line:70
+show_hist	../python/camshift.py	/^    def show_hist(self):$/;"	kind:member	line:67
+show_hsv	../python/opt_flow.py	/^            show_hsv = not show_hsv$/;"	kind:variable	line:90
+show_hsv	../python/opt_flow.py	/^    show_hsv = False$/;"	kind:variable	line:69
+shuffle	../python/digits.py	/^    shuffle = rand.permutation(len(digits))$/;"	kind:variable	line:159
+sketch	../python/inpaint.py	/^    sketch = Sketcher('img', [img_mark, mark], lambda : ((255, 255, 255), 255))$/;"	kind:variable	line:41
+small	../python/browse.py	/^        small = cv2.pyrDown(small)$/;"	kind:variable	line:53
+small	../python/browse.py	/^    small = img$/;"	kind:variable	line:51
+small	../python/color_histogram.py	/^        small = cv2.pyrDown(frame)$/;"	kind:variable	line:48
+sources	../python/video.py	/^        sources = [ 0 ]$/;"	kind:variable	line:210
+speckleRange	../python/stereo_match.py	/^        speckleRange = 32$/;"	kind:variable	line:53
+speckleWindowSize	../python/stereo_match.py	/^        speckleWindowSize = 100,$/;"	kind:variable	line:52
+split2d	../python/digits.py	/^def split2d(img, cell_size, flatten=True):$/;"	kind:function	line:47
+splitfn	../python/common.py	/^def splitfn(fn):$/;"	kind:function	line:31
+square_size	../python/calibrate.py	/^    square_size = float(args.get('--square_size'))$/;"	kind:variable	line:46
+squares	../python/squares.py	/^        squares = find_squares(img)$/;"	kind:variable	line:49
+squares.py	../python/squares.py	1;"	kind:file	line:1
+src	../python/coherence.py	/^    src = cv2.imread(fn)$/;"	kind:variable	line:56
+src	../python/houghcircles.py	/^    src = cv2.imread(fn, 1)$/;"	kind:variable	line:26
+src	../python/houghlines.py	/^    src = cv2.imread(fn)$/;"	kind:variable	line:27
+state	../python/kalman.py	/^            state = np.dot(kalman.transitionMatrix, state) + process_noise$/;"	kind:variable	line:85
+state	../python/kalman.py	/^        state = 0.1 * np.random.randn(2, 1)$/;"	kind:variable	line:36
+state_angle	../python/kalman.py	/^            state_angle = state[0, 0]$/;"	kind:variable	line:50
+state_pt	../python/kalman.py	/^            state_pt = calc_point(state_angle)$/;"	kind:variable	line:51
+state_vis	../python/mosse.py	/^    def state_vis(self):$/;"	kind:member	line:105
+stereo	../python/stereo_match.py	/^    stereo = cv2.StereoSGBM_create(minDisparity = min_disp,$/;"	kind:variable	line:45
+stereo_match.py	../python/stereo_match.py	1;"	kind:file	line:1
+str_modes	../python/morphology.py	/^    str_modes = cycle(['ellipse', 'rect', 'cross'])$/;"	kind:variable	line:45
+sz	../python/browse.py	/^        sz = 4096$/;"	kind:variable	line:43
+t	../python/digits_adjust.py	/^    t = clock()$/;"	kind:variable	line:133
+t	../python/tutorial_code/core/mat_mask_operations/mat_mask_operations.py	/^t = (time.time() - t)\/1000$/;"	kind:variable	line:35
+t	../python/tutorial_code/core/mat_mask_operations/mat_mask_operations.py	/^t = (time.time() - t)\/1000$/;"	kind:variable	line:51
+t	../python/tutorial_code/core/mat_mask_operations/mat_mask_operations.py	/^t = round(time.time())$/;"	kind:variable	line:33
+t	../python/tutorial_code/core/mat_mask_operations/mat_mask_operations.py	/^t = time.time()$/;"	kind:variable	line:40
+table_number	../python/plane_tracker.py	/^                   table_number = 6, # 12$/;"	kind:variable	line:47
+term	../python/calibrate.py	/^            term = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_COUNT, 30, 0.1)$/;"	kind:variable	line:67
+term_crit	../python/kmeans.py	/^        term_crit = (cv2.TERM_CRITERIA_EPS, 30, 0.1)$/;"	kind:variable	line:37
+test_rate	../python/letter_recog.py	/^    test_rate  = np.mean(model.predict(samples[train_n:]) == responses[train_n:].astype(int))$/;"	kind:variable	line:180
+texture_flow.py	../python/texture_flow.py	1;"	kind:file	line:1
+theta	../python/houghlines.py	/^                theta = lines[i][0][1]$/;"	kind:variable	line:43
+thickness	../python/grabcut.py	/^thickness = 3           # brush thickness$/;"	kind:variable	line:55
+threaded_mode	../python/video_threaded.py	/^    threaded_mode = True$/;"	kind:variable	line:61
+threadn	../python/video_threaded.py	/^    threadn = cv2.getNumberOfCPUs()$/;"	kind:variable	line:57
+to_rect	../python/common.py	/^def to_rect(a):$/;"	kind:function	line:47
+toint	../python/fitline.py	/^def toint(p):$/;"	kind:function	line:42
+track	../python/browse.py	/^        track = np.cumsum(np.random.rand(500000, 2)-0.5, axis=0)$/;"	kind:variable	line:46
+track	../python/browse.py	/^        track = np.int32(track*10 + (sz\/2, sz\/2))$/;"	kind:variable	line:47
+track	../python/plane_tracker.py	/^    def track(self, frame):$/;"	kind:member	line:98
+train	../python/digits.py	/^    def train(self, samples, responses):$/;"	kind:member	line:83
+train	../python/digits.py	/^    def train(self, samples, responses):$/;"	kind:member	line:98
+train	../python/letter_recog.py	/^    def train(self, samples, responses):$/;"	kind:member	line:113
+train	../python/letter_recog.py	/^    def train(self, samples, responses):$/;"	kind:member	line:129
+train	../python/letter_recog.py	/^    def train(self, samples, responses):$/;"	kind:member	line:66
+train	../python/letter_recog.py	/^    def train(self, samples, responses):$/;"	kind:member	line:80
+train	../python/letter_recog.py	/^    def train(self, samples, responses):$/;"	kind:member	line:92
+train_n	../python/digits.py	/^    train_n = int(0.9*len(samples))$/;"	kind:variable	line:165
+train_n	../python/letter_recog.py	/^    train_n = int(len(samples)*model.train_ratio)$/;"	kind:variable	line:169
+train_rate	../python/letter_recog.py	/^    train_rate = np.mean(model.predict(samples[:train_n]) == responses[:train_n].astype(int))$/;"	kind:variable	line:179
+train_ratio	../python/letter_recog.py	/^    train_ratio = 0.5$/;"	kind:variable	line:41
+tst_scene_render.py	../python/tst_scene_render.py	1;"	kind:file	line:1
+turing.py	../python/turing.py	1;"	kind:file	line:1
+uniquenessRatio	../python/stereo_match.py	/^        uniquenessRatio = 10,$/;"	kind:variable	line:51
+unroll_responses	../python/letter_recog.py	/^    def unroll_responses(self, responses):$/;"	kind:member	line:55
+unroll_samples	../python/letter_recog.py	/^    def unroll_samples(self, samples):$/;"	kind:member	line:48
+update	../python/coherence.py	/^    def update():$/;"	kind:function	line:61
+update	../python/common.py	/^    def update(self, v):$/;"	kind:member	line:158
+update	../python/contours.py	/^    def update(levels):$/;"	kind:function	line:60
+update	../python/deconvolution.py	/^    def update(_):$/;"	kind:function	line:93
+update	../python/distrans.py	/^    def update(dummy=None):$/;"	kind:function	line:39
+update	../python/fitline.py	/^def update(_=None):$/;"	kind:function	line:57
+update	../python/floodfill.py	/^    def update(dummy=None):$/;"	kind:function	line:42
+update	../python/morphology.py	/^    def update(dummy=None):$/;"	kind:function	line:54
+update	../python/mosse.py	/^    def update(self, frame, rate = 0.125):$/;"	kind:member	line:84
+update_kernel	../python/mosse.py	/^    def update_kernel(self):$/;"	kind:member	line:143
+v	../python/lappyr.py	/^            v = int(cv2.getTrackbarPos('%d'%i, 'level control') \/ 5)$/;"	kind:variable	line:67
+value	../python/grabcut.py	/^            value = DRAW_BG$/;"	kind:variable	line:139
+value	../python/grabcut.py	/^            value = DRAW_FG$/;"	kind:variable	line:142
+value	../python/grabcut.py	/^            value = DRAW_FG$/;"	kind:variable	line:159
+value	../python/grabcut.py	/^            value = DRAW_PR_BG$/;"	kind:variable	line:144
+value	../python/grabcut.py	/^            value = DRAW_PR_FG$/;"	kind:variable	line:146
+value	../python/grabcut.py	/^value = DRAW_FG         # drawing initialized to FG$/;"	kind:variable	line:54
+video.py	../python/video.py	1;"	kind:file	line:1
+video_src	../python/mser.py	/^        video_src = 0$/;"	kind:variable	line:26
+video_src	../python/mser.py	/^        video_src = sys.argv[1]$/;"	kind:variable	line:24
+video_threaded.py	../python/video_threaded.py	1;"	kind:file	line:1
+video_v4l2.py	../python/video_v4l2.py	1;"	kind:file	line:1
+vis	../python/calibrate.py	/^            vis = cv2.cvtColor(img, cv2.COLOR_GRAY2BGR)$/;"	kind:variable	line:71
+vis	../python/color_histogram.py	/^        vis = hsv_map*h[:,:,np.newaxis] \/ 255.0$/;"	kind:variable	line:56
+vis	../python/digits.py	/^    vis = evaluate_model(model, digits_test, samples_test, labels_test)$/;"	kind:variable	line:175
+vis	../python/digits.py	/^    vis = evaluate_model(model, digits_test, samples_test, labels_test)$/;"	kind:variable	line:181
+vis	../python/mser.py	/^        vis = img.copy()$/;"	kind:variable	line:36
+vis	../python/texture_flow.py	/^    vis = img.copy()$/;"	kind:variable	line:38
+vis	../python/turing.py	/^        vis = a.copy()$/;"	kind:variable	line:69
+voronoi	../python/distrans.py	/^            voronoi = not voronoi$/;"	kind:variable	line:66
+voronoi	../python/distrans.py	/^    voronoi = False$/;"	kind:variable	line:37
+warp_flow	../python/opt_flow.py	/^def warp_flow(img, flow):$/;"	kind:function	line:50
+watershed	../python/watershed.py	/^    def watershed(self):$/;"	kind:member	line:50
+watershed.py	../python/watershed.py	1;"	kind:file	line:1
+win	../python/deconvolution.py	/^    win = 'deconvolution'$/;"	kind:variable	line:78
+window_size	../python/stereo_match.py	/^    window_size = 3$/;"	kind:variable	line:42
+write_ply	../python/stereo_match.py	/^def write_ply(fn, verts, colors):$/;"	kind:function	line:27
+xrange	../python/browse.py	/^    xrange = range$/;"	kind:variable	line:21
+xrange	../python/camshift.py	/^    xrange = range$/;"	kind:variable	line:31
+xrange	../python/coherence.py	/^    xrange = range$/;"	kind:variable	line:18
+xrange	../python/contours.py	/^    xrange = range$/;"	kind:variable	line:18
+xrange	../python/digits_adjust.py	/^    xrange = range$/;"	kind:variable	line:22
+xrange	../python/gaussian_mix.py	/^    xrange = range$/;"	kind:variable	line:9
+xrange	../python/lappyr.py	/^    xrange = range$/;"	kind:variable	line:21
+xrange	../python/mosse.py	/^    xrange = range$/;"	kind:variable	line:30
+xrange	../python/plane_tracker.py	/^    xrange = range$/;"	kind:variable	line:30
+xrange	../python/squares.py	/^    xrange = range$/;"	kind:variable	line:14
+xrange	../python/turing.py	/^    xrange = range$/;"	kind:variable	line:16
