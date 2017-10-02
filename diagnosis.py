@@ -145,7 +145,7 @@ def loop():
 	clinevalue = 0
 	rlinevalue = 0
 	
-	print("This is a diagnostic program for your mobile robot.\n")
+        print("This is a diagnostic program for your mobile robot./n")
 	print("0: go foward\n1: go backward\n2: front left led\n3: frount right led\n",
 		"4: rear left led\n5: rear right led\n6: ultrasonic\n7: IR\n8: buzzer\n9:go right\n10: go left",
 		"\n11: Exit the program\n")
