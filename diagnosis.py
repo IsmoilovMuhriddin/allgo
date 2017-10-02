@@ -61,58 +61,58 @@ def action(menu):
 
 	if menu==0:
 		pca9685.go_forward();
-		delay(500);
+	    time.sleep(500);
 		pca9685.stop();
 		
 	elif menu== 1:
 		pca9685.go_back();
-		delay(500);
+	    time.sleep(500);
 		pca9685.stop();
 		
 	elif menu== 2:
 		# frount left
 		wp.digitalWrite(OUT[0], HIGH);
-		delay(50);
+	    time.sleep(50);
 		wp.digitalWrite(OUT[0], LOW);
-		delay(50);
+	    time.sleep(50);
 		wp.digitalWrite(OUT[0], HIGH);
-		delay(50);
+	    time.sleep(50);
 		wp.digitalWrite(OUT[0], LOW);
 		
 	elif menu== 3:
 		#// frount right
 		wp.digitalWrite(OUT[1], HIGH);
-		delay(50);
+	    time.sleep(50);
 		wp.digitalWrite(OUT[1], LOW);
-		delay(50);
+	    time.sleep(50);
 		wp.digitalWrite(OUT[1], HIGH);
-		delay(50);
+	    time.sleep(50);
 		wp.digitalWrite(OUT[1], LOW);
 		
 	elif menu== 4:
 		#// rear left
 		wp.digitalWrite(OUT[3], HIGH);
-		delay(50);
+	    time.sleep(50);
 		wp.digitalWrite(OUT[3], LOW);
-		delay(50);
+	    time.sleep(50);
 		wp.digitalWrite(OUT[3], HIGH);
-		delay(50);
+	    time.sleep(50);
 		wp.digitalWrite(OUT[3], LOW);
 		
 	elif menu== 5:
 		# rear right
 		wp.digitalWrite(OUT[2], HIGH);
-		delay(50);
+	    time.sleep(50);
 		wp.digitalWrite(OUT[2], LOW);
-		delay(50);
+	    time.sleep(50);
 		wp.digitalWrite(OUT[2], HIGH);
-		delay(50);
+	    time.sleep(50);
 		wp.digitalWrite(OUT[2], LOW);
 		
 	elif menu== 8:
 		printf("Beeping for 2 seconds\n");
 		pca9685.on_buzz();
-		delay(2000);
+	    time.sleep(2000);
 		pca9685.off_buzz();
 		
 	elif menu== 11:
