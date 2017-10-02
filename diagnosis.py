@@ -122,7 +122,7 @@ def action(menu):
 		wp.digitalWrite(OUT[2], LOW);
 	elif menu ==6:
 	    #ultrasonic
-	    checkUltra();
+	    check_ultra();
 	elif menu== 9:
 		pca9685.go_right();
 		time.sleep(20);
