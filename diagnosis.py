@@ -118,13 +118,13 @@ def action(menu):
 		time.sleep(20);
 		pca9685.stop();		
 	elif menu== 8:
-		printf("Beeping for 2 seconds\n");
+		print("Beeping for 2 seconds\n");
 		pca9685.on_buzz();
 		time.sleep(2000);
 		pca9685.off_buzz();
 		
 	elif menu== 11:
-		printf("EXIT\n");
+		print("EXIT\n");
 		keepRunning = 0;
 			
 	else:
