@@ -63,6 +63,11 @@ def setup():
         wp.digitalWrite(OUT[i], LOW)
     for i in range(len(IN)):
         wp.pinMode(IN[i],INPUT)
+
+def check_ultra():
+	rawDis=ultra.raw_distance()
+	disValue = ultra.distance_metric(rawDis)
+	print("Distance:{0}\t Raw dist:{1}",rawDis,disValue)
 def action(menu):
    	global curMillis
 
@@ -158,10 +163,7 @@ def loop():
 	action(menu)
 	menu = -1
 
-def check_ultra():
-	rawDis=ultra.raw_distance()
-	disValue = ultra.distance_metric(rawDis)
-	print("Distance:{0}\t Raw dist:{1}",rawDis,disValue)
+
 """// obstacle detection and move to another derection.
 void checkUltra(){
 	float disValue = ultra.ReadDista
