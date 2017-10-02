@@ -154,8 +154,8 @@ def signal_handler(dummy):
 def main (**kwargs):
     setup()
     signal.signal(signal.SIGINT, signal_handler)
-	while keepRunning:
-    	loop()
+    while keepRunning:
+        loop()
     return 0
 
 main()    
