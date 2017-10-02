@@ -5,7 +5,7 @@
 #include "Ultrasonic.h"
 #include <signal.h>"""
 
-import Ardafruit_PCA9685 as pca
+import Adafruit_PCA9685 as pca
 import wiringpi as wp
 import signal
 import sys
