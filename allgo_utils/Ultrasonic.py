@@ -15,23 +15,31 @@ class Ultrasonic(object):
 		wp.pinMode(self.echo,INPUT)
 		wp.digitalWrite(self.trig,LOW)
 		time.sleep(0.5)
+       
     def distance(self,timeout):
+<<<<<<< HEAD
         time.sleep(0.01):
             wp.digitalWrite(self.trig,HIGH)
             time.sleep(0.01)
     	wp.digitalWrite(self.trig,LOW)
+=======
+        time.sleep(0.01)
+        wp.digitalWrite(self.trig,HIGH)
+        time.sleep(0.01)
+        wp.digitalWrite(self.trig,LOW)
+>>>>>>> 8396b8269e42b739ca9c9806d36108a4b4e4ee75
 
-    	now_time = time.time()
-    	while wp.digitalRead(self.echo==LOW and time.time()-now_time<timeout):
-    		pass
+        now_time = time.time()
+        while wp.digitalRead(self.echo==LOW and time.time()-now_time<timeout):
+            pass
         self.record_pulse_length()
         travel_time = self.end_time-self.start_time;
         distanceMeters = 100*(travel_time*340.29)/2
         return distanceMeters
     def record_pulse_length(self):
-    	self.start_time=time.time()
-    	while ( wp.digitalRead(self.echo) == HIGH):
-    		pass
-        self.start_time=time.time()    		
+        self.start_time=time.time()
+        while ( wp.digitalRead(self.echo) == HIGH):
+            pass
+        self.start_time=time.time()         
 
         
