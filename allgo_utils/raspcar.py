@@ -54,7 +54,7 @@ MAX_SPEED = 250
 NOR_SPEED = 120
 MIN_SPEED = 0
 
-MOTOR_START_DELAY = 10
+MOTOR_START_DELAY = 3
 
 logger = logging.getLogger(__name__)
 
@@ -128,7 +128,7 @@ class PCA9685(object):
         if value == 1:
             self.set_pwm(pin, 4096, 0)
 
-    def go_forward(self, speed_cur=self.nSpeed):
+    def go_forward(self, speed_cur=NOR_SPEED):
         self.set_pin(self.en1Pin, LOW_PIN)
         self.set_pin(self.en2Pin, HIGH_PIN)
 
@@ -138,7 +138,7 @@ class PCA9685(object):
         self.set_speed(self.enAPin, speed_cur)
         self.set_speed(self.enBPin, speed_cur)
 
-    def go_back(self, speed_cur=self.nSpeed):
+    def go_back(self, speed_cur=NOR_SPEED):
         self.set_pin(self.en1Pin, HIGH_PIN)
         self.set_pin(self.en2Pin, LOW_PIN)
 
@@ -148,7 +148,7 @@ class PCA9685(object):
         self.set_speed(self.enAPin, speed_cur)
         self.set_speed(self.enBPin, speed_cur)
 
-    def go_left(self, speed_cur=self.nSpeed):
+    def go_left(self, speed_cur=NOR_SPEED):
         self.set_pin(self.en1Pin, HIGH_PIN)
         self.set_pin(self.en2Pin, LOW_PIN)
 
@@ -158,7 +158,7 @@ class PCA9685(object):
         self.set_speed(self.enAPin, speed_cur)
         self.set_speed(self.enBPin, speed_cur)
 
-    def go_right(self, speed_cur=self.nSpeed):
+    def go_right(self, speed_cur=NOR_SPEED):
         self.set_pin(self.en1Pin, LOW_PIN)
         self.set_pin(self.en2Pin, HIGH_PIN)
 
