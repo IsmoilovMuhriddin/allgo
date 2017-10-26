@@ -1,5 +1,5 @@
 # allgo
-Capstone Project (Inha University ,2017 fall semester)
+Capstone Project (Inha University, 2017 fall semester)
 
 
 ## Requirements

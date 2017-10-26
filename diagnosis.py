@@ -5,7 +5,7 @@ import signal
 import sys
 import time
 from allgo_utils import ultrasonic as uls
-from allgo_utils import PCA9685 as pca
+from allgo_utils import PCA9685
 from allgo_utils import ir_sens
 LOW = 0
 HIGH = 1
@@ -30,7 +30,7 @@ ULTRASONIC_TRIG	= 3 # TRIG port is to use as output signal
 ULTRASONIC_ECHO = 23 # ECHO port is to use as input signal 
 
 # An instance of the motor & buzzer
-pca9685 =pca.PCA9685()  
+pca9685 = PCA9685()
 #Ultrasonic ultra; # An instance of the ultrasonic sensor
 ultra = uls(ULTRASONIC_TRIG,ULTRASONIC_ECHO)
 
