@@ -59,7 +59,7 @@ def setup():
         wp.pinMode(IN[i],INPUT)
 
 def check_ultra():
-	disValue=ultra.distance(3000)
+	disValue=ultra.distance()
 	print("Distance:%.2f\t"%disValue)
 def action(menu):
    	global curMillis
