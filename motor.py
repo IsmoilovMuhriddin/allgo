@@ -9,7 +9,7 @@ pca = PCA9685()
 
 def main():
     sp=int(input('input Speed'))
-    pca.go_left(speed_cur=sp,turning_rate=0.25)
+    pca.go_left(speed_cur=sp,turning_rate=0.75)
 
 
 
