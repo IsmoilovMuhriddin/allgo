@@ -5,7 +5,7 @@ HIGH =1
 OUTPUT = wp.OUTPUT
 INPUT = wp.INPUT
 
-class Ultrasonic(object):
+class ultrasonic(object):
     def __init__(self, trig,echo):
         self.trig = trig
         self.echo = echo
