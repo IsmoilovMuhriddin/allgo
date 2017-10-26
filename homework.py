@@ -116,7 +116,7 @@ def ex4():
     r_ir = wp.digitalRead(IN['right_IR'])
     while(count!=2):
         pca.go_forward()
-        print 'left:%d center:%d right:%d '%l_ir,c_ir,r_ir
+        print 'left:%d center:%d right:%d '%(l_ir,c_ir,r_ir)
         if (bool(l_ir) and bool(c_ir) and bool(r_ir)) is True:
             if(state!=True):
                 count+=1
