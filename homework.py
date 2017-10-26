@@ -49,7 +49,7 @@ def ex2():
             1. Go forward
             2. Stop and flicker warning light when an Object is closer than 30cm"""
     def warn(times=3):
-        for i in times:
+        for i in range(times):
             wp.digitalWrite(OUT[0], HIGH)
             wp.digitalWrite(OUT[1], HIGH)
             time.sleep(0.2)
