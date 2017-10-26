@@ -6,5 +6,12 @@ import time
 
 
 pca = PCA9685()
-pca.
+
+def main():
+    pca.go_left(speed_cur=50,turning_rate=0.25)
+
+
+
+if __name__ == "__main__":
+    main()
 
