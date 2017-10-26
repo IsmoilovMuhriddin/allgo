@@ -90,15 +90,15 @@ def ex3():
     """3.Ultrasonic Sensor Application
          Create a program that Keep the 50cm distance with an object"""
     pca.stop()
-    pca.set_normal_speed(100)
+    pca.set_normal_speed(85)
     while True:
 
         dist = ultra.distance()
         print
         'Distance(cm):%.2f' % dist
-        if dist < 50:
+        if dist > 60:
             pca.go_forward()
-        elif dist>50:
+        elif dist<50:
             pca.go_back()
         else:
             pca.stop_extreme()
@@ -116,6 +116,7 @@ def ex4():
     r_ir = wp.digitalRead(IN['right_IR'])
     while(count!=2):
         pca.go_forward()
+        print 'left:%d center:%d right:%d '%l_ir,c_ir,r_ir
         if (bool(l_ir) and bool(c_ir) and bool(r_ir)) is True:
             if(state!=True):
                 count+=1
@@ -124,6 +125,7 @@ def ex4():
                 if(state!=False):
                     count+=1
                     state=False
+        time.sleep(0.1)
     pca.stop_extreme()
     pass
 
