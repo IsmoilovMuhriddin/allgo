@@ -13,7 +13,7 @@ def main():
     mod=int(input())
     if(mod==1):
         sp=int(input('input Speed'))
-        pca.go_left(speed_cur=sp,turning_rate=0.75)
+        pca.go_left(speed_cur=sp,turning_rate=0.25)
     elif mod==2:
         sp = int(input('input Speed'))
         pca.go_right(speed_cur=sp, turning_rate=0.75)
