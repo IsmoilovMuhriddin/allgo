@@ -45,7 +45,7 @@ def ex1():
 
 def ex2():
     """2.Ultrasonic sensor application
-        • Create a program that
+         Create a program that
             1. Go forward
             2. Stop and flicker warning light when an Object is closer than 30cm"""
     def warn(times=3):
@@ -73,7 +73,7 @@ def ex2():
 
 def ex3():
     """3.Ultrasonic Sensor Application
-        • Create a program that Keep the 50cm distance with an object"""
+         Create a program that Keep the 50cm distance with an object"""
     pass
 
 def ex4():
@@ -85,7 +85,7 @@ def ex4():
 
 def ex5():
     """5.Multiple Sensor Application
-        • Create a program that
+         Create a program that
             – Trace the line
             – Stop, beep the buzzer and flicker warning light when obstacle is detected
             – Wait until no object detected on the line.
