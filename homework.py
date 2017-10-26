@@ -128,7 +128,18 @@ def ex4():
         time.sleep(0.1)
     pca.stop_extreme()
     pass
-
+def ex4_demo():
+    count = 0
+    state = False
+    l_ir = wp.digitalRead(IN['left_IR'])
+    c_ir = wp.digitalRead(IN['center_IR'])
+    r_ir = wp.digitalRead(IN['right_IR'])
+    while (True):
+        print
+        'left:%d center:%d right:%d ' % (l_ir, c_ir, r_ir)
+        if bool(c_ir)==True:
+            warn(1)
+        time.sleep(0.2)
 def ex5():
     """5.Multiple Sensor Application
          Create a program that
@@ -160,6 +171,8 @@ def main():
             ex4()
         elif menu == 5:
             ex5()
+        elif menu == 6:
+            ex4_demo()
 
     pass
 
