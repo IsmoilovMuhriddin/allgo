@@ -128,49 +128,60 @@ class PCA9685(object):
         if value == 1:
             self.set_pwm(pin, 4096, 0)
 
-    def go_forward(self, speed_cur=NOR_SPEED):
+    def go_forward(self, speed_cur=-1):
         self.set_pin(self.en1Pin, HIGH_PIN)
         self.set_pin(self.en2Pin, LOW_PIN)
 
         self.set_pin(self.en3Pin, HIGH_PIN)
         self.set_pin(self.en4Pin, LOW_PIN)
-
+        if speed_cur==-1:
+            speed_cur=self.nSpeed
         self.set_speed(self.enAPin, speed_cur)
         self.set_speed(self.enBPin, speed_cur)
 
-    def go_back(self, speed_cur=NOR_SPEED):
+    def go_back(self, speed_cur=-1):
         self.set_pin(self.en1Pin, LOW_PIN)
         self.set_pin(self.en2Pin, HIGH_PIN)
 
         self.set_pin(self.en3Pin, LOW_PIN)
         self.set_pin(self.en4Pin, HIGH_PIN)
-
+        if speed_cur==-1:
+            speed_cur=self.nSpeed
         self.set_speed(self.enAPin, speed_cur)
         self.set_speed(self.enBPin, speed_cur)
 
-    def go_left(self, speed_cur=NOR_SPEED,turning_rate=0.5):
+    def go_left(self, speed_cur=-1,turning_rate=0.5):
         self.set_pin(self.en1Pin, HIGH_PIN)
         self.set_pin(self.en2Pin, LOW_PIN)
 
-        self.set_pin(self.en3Pin, HIGH_PIN)
-        self.set_pin(self.en4Pin, LOW_PIN)
+        self.set_pin(self.en3Pin, LOW_PIN)
+        self.set_pin(self.en4Pin, HIGH_PIN)
+        if speed_cur==-1:
+            speed_cur=self.nSpeed
 
         self.set_speed(self.enAPin, int(speed_cur * turning_rate))
         self.set_speed(self.enBPin, speed_cur)
 
-    def go_right(self, speed_cur=NOR_SPEED,turning_rate=0.5):
+    def go_right(self, speed_cur=-1,turning_rate=0.5):
         self.set_pin(self.en1Pin, HIGH_PIN)
         self.set_pin(self.en2Pin, LOW_PIN)
 
         self.set_pin(self.en3Pin, HIGH_PIN)
         self.set_pin(self.en4Pin, LOW_PIN)
-
+        if speed_cur==-1:
+            speed_cur=self.nSpeed
         self.set_speed(self.enAPin, speed_cur)
         self.set_speed(self.enBPin, int(speed_cur * turning_rate))
 
     def stop(self):
         self.set_speed(self.enAPin, 0);
         self.set_speed(self.enBPin, 0);
+    def stop_extreme(self):
+        self.set_pin(self.en1Pin, LOW_PIN)
+        self.set_pin(self.en2Pin, LOW_PIN)
+
+        self.set_pin(self.en3Pin, LOW_PIN)
+        self.set_pin(self.en4Pin, LOW_PIN)
 
     def set_speed(self, pin, speed):
         if (speed < 0):
