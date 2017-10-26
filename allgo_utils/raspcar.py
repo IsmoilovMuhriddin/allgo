@@ -151,11 +151,11 @@ class PCA9685(object):
         self.set_speed(self.enBPin, speed_cur)
 
     def go_left(self, speed_cur=-1,turning_rate=0.5):
-        self.set_pin(self.en1Pin, HIGH_PIN)
-        self.set_pin(self.en2Pin, LOW_PIN)
+        self.set_pin(self.en1Pin, LOW_PIN)
+        self.set_pin(self.en2Pin, HIGH_PIN)
 
-        self.set_pin(self.en3Pin, LOW_PIN)
-        self.set_pin(self.en4Pin, HIGH_PIN)
+        self.set_pin(self.en3Pin, HIGH_PIN)
+        self.set_pin(self.en4Pin, LOW_PIN)
         if speed_cur==-1:
             speed_cur=self.nSpeed
 
@@ -166,8 +166,8 @@ class PCA9685(object):
         self.set_pin(self.en1Pin, HIGH_PIN)
         self.set_pin(self.en2Pin, LOW_PIN)
 
-        self.set_pin(self.en3Pin, HIGH_PIN)
-        self.set_pin(self.en4Pin, LOW_PIN)
+        self.set_pin(self.en3Pin, LOW_PIN)
+        self.set_pin(self.en4Pin, HIGH_PIN)
         if speed_cur==-1:
             speed_cur=self.nSpeed
         self.set_speed(self.enAPin, speed_cur)

@@ -31,12 +31,12 @@ def ex1():
     """1. DC Motor Application
         Create a program that:  - Turn smoothly"""
     while(True):
-        pca.go_left(speed_cur=100,turning_rate=0.65)
-        time.sleep(1)
+        pca.go_left(speed_cur=120,turning_rate=0.65)
+        time.sleep(2)
         pca.stop()
         time.sleep(2)
-        pca.go_right(speed_cur=120,turning_rate=0.75)
-        time.sleep(1)
+        pca.go_right(speed_cur=120,turning_rate=0.65)
+        time.sleep(2)
         pca.stop()
         time.sleep(2)
         pass
