@@ -1,26 +1,28 @@
 import wiringpi as wp
 import time
-LOW =0
+LOW = 0
 HIGH =1
 OUTPUT = wp.OUTPUT
 INPUT = wp.INPUT
 
+
+MAX_SENSOR_DISTANCE	=	500
+NO_ECHO	            =	0
+
 class ultrasonic(object):
-    def __init__(self, trig,echo):
+    def __init__(self, trig=3,echo=23):
         self.trig = trig
         self.echo = echo
-        self.end_time=0
-        self.start_time=0
         wp.pinMode(self.trig,OUTPUT)
         wp.pinMode(self.echo,INPUT)
-        wp.digitalWrite(self.trig,LOW)
         time.sleep(0.5)
-    #here semms error on indent   
-    def distance(self,timeout):
+
+    def distance(self):
+        # pulse 0.00001 = 10mikros
+
         wp.digitalWrite(self.trig,LOW)
         time.sleep(0.1)
     	wp.digitalWrite(self.trig,HIGH)
-        # pulse 0.00001 = 10mikros
         time.sleep(0.00001)
         wp.digitalWrite(self.trig,LOW)
         
@@ -43,5 +45,3 @@ class ultrasonic(object):
         while ( wp.digitalRead(self.echo) == HIGH):
             pass
         self.end_time=time.time()
-		
-        
