@@ -1,10 +1,12 @@
 import sys
-import rasp_car_PCA9685 as pca
+
 import wiringpi as wp
 import signal
 import sys
 import time
-from allgo_utils import Ultrasonic as uls
+from allgo_utils import ultrasonic as uls
+from allgo_utils import PCA9685 as pca
+from allgo_utils import ir_sens
 LOW = 0
 HIGH = 1
 OUTPUT = wp.OUTPUT
