@@ -23,8 +23,7 @@ def main():
         sp = int(input('input Speed'))
         pca.go_right(speed_cur=sp, turning_rate=0.75)
     elif mod==3:
-        while(True):
-            ultra_dist()
+        ultra_dist()
 
 
 if __name__ == "__main__":
