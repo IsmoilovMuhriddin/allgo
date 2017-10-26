@@ -8,7 +8,8 @@ import time
 pca = PCA9685()
 
 def main():
-    pca.go_left(speed_cur=50,turning_rate=0.25)
+    sp=int(input('input Speed'))
+    pca.go_left(speed_cur=100,turning_rate=0.25)
 
 
 
