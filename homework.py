@@ -7,8 +7,16 @@ preMillis = 0
 
 ULTRASONIC_TRIG	= 3 # TRIG port is to use as output signal
 ULTRASONIC_ECHO = 23 # ECHO port is to use as input signal
-OUT = [5, 0, 1, 2, 3] # 5:front_left_led, 0:front_right_led, 1:rear_right_led, 2:rear_left_led, 3:ultra_trig
-IN = [21, 22, 26, 23] # 21:left_IR, 22:center_IR, 26:right_IR, 23:ultra_echo
+OUT = {'front_left_led':5,
+       'front_right_led':0,
+       'rear_right_led':1,
+       'rear_left_led':2,
+       'ultra_trig':3} # 5:front_left_led, 0:front_right_led, 1:rear_right_led, 2:rear_left_led, 3:ultra_trig
+IN = {'left_IR':21,
+      'center_IR':22,
+      'right_IR':26,
+      'ultra_echo':23} # 21:left_IR, 22:center_IR, 26:right_IR, 23:ultra_echo
+
 
 LOW = 0
 HIGH = 1
@@ -20,12 +28,26 @@ pca = PCA9685()
 ultra = ultrasonic(ULTRASONIC_TRIG,ULTRASONIC_ECHO)
 def setup():
     wp.wiringPiSetup()  # Initialize wiringPi to load Raspbarry Pi PIN numbering scheme
-    for i in range(len(OUT)):
-        wp.pinMode(OUT[i],OUTPUT)
-        wp.digitalWrite(OUT[i], LOW)
-    for i in range(len(IN)):
-        wp.pinMode(IN[i],INPUT)
+    for key in OUT:
+        wp.pinMode(OUT[key],OUTPUT)
+        wp.digitalWrite(OUT[key], LOW)
+    for key in IN:
+        wp.pinMode(IN[key],INPUT)
+def warn(times=3):
+    for i in range(times):
+        wp.digitalWrite(OUT['front_right_led'], HIGH)
+        wp.digitalWrite(OUT['front_left_led'], HIGH)
 
+        wp.digitalWrite(OUT['rear_right_led'], HIGH)
+        wp.digitalWrite(OUT['rear_left_led'], HIGH)
+        time.sleep(0.15)
+
+        wp.digitalWrite(OUT['front_right_led'], LOW)
+        wp.digitalWrite(OUT['front_left_led'], LOW)
+
+        wp.digitalWrite(OUT['rear_right_led'], LOW)
+        wp.digitalWrite(OUT['rear_left_led'], LOW)
+        time.sleep(0.15)
 
 def ex1():
     """1. DC Motor Application
@@ -48,25 +70,18 @@ def ex2():
          Create a program that
             1. Go forward
             2. Stop and flicker warning light when an Object is closer than 30cm"""
-    def warn(times=3):
-        for i in range(times):
-            wp.digitalWrite(OUT[0], HIGH)
-            wp.digitalWrite(OUT[1], HIGH)
-            time.sleep(0.2)
-            wp.digitalWrite(OUT[0], LOW)
-            wp.digitalWrite(OUT[1], LOW)
-            time.sleep(0.2)
+
 
     pca.stop()
     pca.set_normal_speed(100)
     while True:
 
         dist = ultra.distance()
-        print 'Distance(sm):%.2f'%dist
+        print 'Distance(cm):%.2f'%dist
         if(dist>30):
             pca.go_forward()
         else:
-            pca.stop()
+            pca.stop_extreme()
             warn()
         time.sleep(0.3)
     pass
@@ -74,13 +89,42 @@ def ex2():
 def ex3():
     """3.Ultrasonic Sensor Application
          Create a program that Keep the 50cm distance with an object"""
-    pass
+    pca.stop()
+    pca.set_normal_speed(100)
+    while True:
 
+        dist = ultra.distance()
+        print
+        'Distance(cm):%.2f' % dist
+        if dist < 50:
+            pca.go_forward()
+        elif dist>50:
+            pca.go_back()
+        else:
+            pca.stop_extreme()
+        time.sleep(0.2)
+    pass
 def ex4():
     """4.IR sensor application
         Create a program with TCRT 5000 IR sensor
             1. Go straight until it detect the 2nd black belt
             2. Stop"""
+    count=0
+    state = False
+    l_ir = wp.digitalRead(IN['left_IR'])
+    c_ir = wp.digitalRead(IN['center_IR'])
+    r_ir = wp.digitalRead(IN['right_IR'])
+    while(count!=2):
+        pca.go_forward()
+        if (bool(l_ir) and bool(c_ir) and bool(r_ir)) is True:
+            if(state!=True):
+                count+=1
+                state = True
+            if(count ==1):
+                if(state!=False):
+                    count+=1
+                    state=False
+    pca.stop_extreme()
     pass
 
 def ex5():
