@@ -86,10 +86,10 @@ def ex4():
 def ex5():
     """5.Multiple Sensor Application
          Create a program that
-            – Trace the line
-            – Stop, beep the buzzer and flicker warning light when obstacle is detected
-            – Wait until no object detected on the line.
-            – Stop on stop line"""
+             Trace the line
+             Stop, beep the buzzer and flicker warning light when obstacle is detected
+             Wait until no object detected on the line.
+             Stop on stop line"""
     pass
 
 
