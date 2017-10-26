@@ -155,7 +155,7 @@ class PCA9685(object):
         self.set_pin(self.en3Pin, LOW_PIN)
         self.set_pin(self.en4Pin, HIGH_PIN)
 
-        self.set_speed(self.enAPin, speed_cur * turning_rate)
+        self.set_speed(self.enAPin, int(speed_cur * turning_rate))
         self.set_speed(self.enBPin, speed_cur)
 
     def go_right(self, speed_cur=NOR_SPEED,turning_rate=0.5):
@@ -166,7 +166,7 @@ class PCA9685(object):
         self.set_pin(self.en4Pin, LOW_PIN)
 
         self.set_speed(self.enAPin, speed_cur)
-        self.set_speed(self.enBPin, speed_cur * turning_rate)
+        self.set_speed(self.enBPin, int(speed_cur * turning_rate))
 
     def stop(self):
         self.set_speed(self.enAPin, 0);
