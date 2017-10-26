@@ -135,8 +135,7 @@ def ex4_demo():
     c_ir = wp.digitalRead(IN['center_IR'])
     r_ir = wp.digitalRead(IN['right_IR'])
     while (True):
-        print
-        'left:%d center:%d right:%d ' % (l_ir, c_ir, r_ir)
+        print 'left:%d center:%d right:%d ' % (l_ir, c_ir, r_ir)
         if bool(c_ir)==True:
             warn(1)
         time.sleep(0.2)
