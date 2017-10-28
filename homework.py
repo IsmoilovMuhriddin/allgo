@@ -81,7 +81,7 @@ def ex2():
         if(dist>30):
             pca.go_forward()
         else:
-            pca.stop_extreme()
+            pca.stop()
             warn()
         time.sleep(0.3)
     pass
@@ -126,7 +126,7 @@ def ex4():
                 if(state!=False):
                     count+=1
                     state=False
-        time.sleep(0.1)
+        time.sleep(0.2)
     pca.stop_extreme()
     pass
 def ex4_demo():
