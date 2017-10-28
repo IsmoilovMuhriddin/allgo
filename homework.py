@@ -162,6 +162,7 @@ def ex2_demo():
             2. Stop and flicker warning light when an Object is closer than 30cm"""
     pca.stop()
     pca.go_forward(speed_cur=255)
+
     time.sleep(1)
     start_ = time.time()
     print 'stop started: ', start_
@@ -200,6 +201,8 @@ def main():
             ex5()
         elif menu == 6:
             ex4_demo()
+        elif menu ==7:
+            ex2_demo()
 
     pass
 
