@@ -80,7 +80,7 @@ def ex2():
 
         print 'Distance(cm):%.2f'%dist
         if dist>45:
-            pca.set_normal_speed(255)
+            pca.set_normal_speed(120)
             pca.go_forward()
         elif dist>40:
             pca.set_normal_speed(65)
@@ -153,6 +153,27 @@ def ex5():
              Stop, beep the buzzer and flicker warning light when obstacle is detected
              Wait until no object detected on the line.
              Stop on stop line"""
+    pass
+
+def ex2_demo():
+    """2.Ultrasonic sensor application
+         Create a program that
+            1. Go forward
+            2. Stop and flicker warning light when an Object is closer than 30cm"""
+    pca.stop()
+    pca.go_forward(speed_cur=255)
+    time.sleep(1)
+    start_ = time.time()
+    print 'stop started: ', start_
+
+    dist=ultra.distance()
+    print dist
+    pca.stop()
+    end_= time.time()
+
+    print 'stop stopped', end_ , ultra.distance()
+
+
     pass
 
 
