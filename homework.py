@@ -73,17 +73,17 @@ def ex2():
 
 
     pca.stop()
-    pca.set_normal_speed(100)
+    pca.set_normal_speed(80)
     while True:
 
         dist = ultra.distance()
 
         print 'Distance(cm):%.2f'%dist
         if dist>40:
-            pca.set_normal_speed(100)
+            pca.set_normal_speed(75)
             pca.go_forward()
         elif dist>35:
-            pca.set_normal_speed(75)
+            pca.set_normal_speed(65)
             pca.go_forward()
         else:
             pca.stop()
