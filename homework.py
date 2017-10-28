@@ -172,6 +172,9 @@ def ex2_demo():
     pca.stop()
     end_= time.time()
 
+    for i in range(10):
+        print ultra.distance()
+
     print 'stop stopped', end_ , ultra.distance()
 
 
