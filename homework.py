@@ -79,10 +79,10 @@ def ex2():
         dist = ultra.distance()
 
         print 'Distance(cm):%.2f'%dist
-        if dist>40:
-            pca.set_normal_speed(75)
+        if dist>45:
+            pca.set_normal_speed(255)
             pca.go_forward()
-        elif dist>35:
+        elif dist>40:
             pca.set_normal_speed(65)
             pca.go_forward()
         else:
