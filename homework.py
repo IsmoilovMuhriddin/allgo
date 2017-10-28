@@ -81,13 +81,12 @@ def ex2():
         print 'Distance(cm):%.2f'%dist
         if dist<40:
             pca.set_normal_speed(80)
-        elif dist<35:
-            pca.set_normal_speed(75)
-        elif dist>30:
-            pca.go_forward()
-        else:
-            pca.stop()
-            warn()
+            if dist>30 and dist<35:
+                pca.set_normal_speed(75)
+                pca.go_forward()
+            else:
+                pca.stop()
+                warn()
         #time.sleep(0.001)
     pass
 
