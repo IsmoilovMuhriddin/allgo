@@ -83,7 +83,7 @@ def ex2():
         else:
             pca.stop()
             warn()
-        time.sleep(0.3)
+        #time.sleep(0.001)
     pass
 
 def ex3():
