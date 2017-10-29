@@ -162,7 +162,7 @@ def ex5():
 
         if bool(l_ir) and (bool(r_ir) is False) is True:
             pca.go_left(speed_cur=110)
-        elif bool(r_ir) (bool(r_ir) is False) is True:
+        elif bool(r_ir) and (bool(r_ir) is False) is True:
             pca.go_right(speed_cur=110)
         elif bool(c_ir) is True:
             pca.go_forward()
