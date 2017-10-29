@@ -83,7 +83,7 @@ def ex2():
             pca.set_normal_speed(120)
             pca.go_forward()
         elif dist>40:
-            pca.set_normal_speed(65)
+            pca.set_normal_speed(70)
             pca.go_forward()
         elif dist>30:
             pca.set_normal_speed(60)
