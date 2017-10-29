@@ -160,9 +160,9 @@ def ex5():
     def detect(l_ir, c_ir, r_ir):
         pca.set_normal_speed(90)
 
-        if bool(l_ir) is True:
+        if bool(l_ir) and (bool(r_ir) is False) is True:
             pca.go_left(speed_cur=110)
-        elif bool(r_ir) is True:
+        elif bool(r_ir) (bool(r_ir) is False) is True:
             pca.go_right(speed_cur=110)
         elif bool(c_ir) is True:
             pca.go_forward()
@@ -199,7 +199,6 @@ def ex5():
                     pca.stop()
                     break
                 state = state_old
-            time.sleep(0.2)
         print 'Current Speed: ',pca.nSpeed
     pass
 
