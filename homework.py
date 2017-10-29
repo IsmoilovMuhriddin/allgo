@@ -98,7 +98,7 @@ def ex3():
     """3.Ultrasonic Sensor Application
          Create a program that Keep the 50cm distance with an object"""
     pca.stop()
-    pca.set_normal_speed(65)
+    pca.set_normal_speed(85)
     while True:
 
         dist = ultra.distance()
@@ -191,15 +191,15 @@ def ex5():
         #detect and follow line
         detect(l_ir, c_ir, r_ir)
         print 'left:%d center:%d right:%d ' % (l_ir, c_ir, r_ir)
-        if bool(c_ir) is True:
+        """if bool(c_ir) is True:
             state = True
             if (state_old != state):
                 count += 1
                 if count == 4:
                     pca.stop()
                     break
-                state = state_old
-        print 'Current Speed: ',pca.nSpeed
+                state = state_old"""
+        print 'Current Speed: ', pca.nSpeed
     pass
 
 def ex2_demo():
