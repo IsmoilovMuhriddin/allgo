@@ -157,7 +157,7 @@ def ex5():
              Wait until no object detected on the line.
              Stop on stop line"""
 
-    pca.set_normal_speed(85)
+    pca.set_normal_speed(100)
     def detect(l_ir, c_ir, r_ir):
 
         if bool(l_ir) and (bool(r_ir) is False) is True:
@@ -168,8 +168,8 @@ def ex5():
             pca.go_forward()
         else:
             pca.stop()
-        print l_ir, c_ir, r_ir
-        time.sleep(0.1)
+        print l_ir, c_ir, r_ir)
+        time.sleep(0.3)
 
     count = 0
     state = False
