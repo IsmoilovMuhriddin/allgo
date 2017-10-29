@@ -169,7 +169,7 @@ def ex5():
         else:
             pca.stop()
         print l_ir, c_ir, r_ir
-        time.sleep(0.2)
+        time.sleep(0.1)
 
     count = 0
     state = False
