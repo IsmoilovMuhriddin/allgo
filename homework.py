@@ -116,17 +116,18 @@ def ex4():
             2. Stop"""
     count=0
     state = False
+    pca.stop()
     pca.set_normal_speed(120)
     while(True):
 
         l_ir = wp.digitalRead(IN['left_IR'])
         c_ir = wp.digitalRead(IN['center_IR'])
         r_ir = wp.digitalRead(IN['right_IR'])
-        if l_ir and c_ir is True:
+        if bool(l_ir) and bool(c_ir) is True:
             pca.go_right()
-        elif c_ir and r_ir is True:
+        elif bool(c_ir) and bool(r_ir) is True:
             pca.go_left()
-        elif c_ir is True:
+        elif bool(c_ir) is True:
             pca.go_forward()
         else:
             pca.stop()
