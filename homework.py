@@ -116,6 +116,7 @@ def ex4():
             2. Stop"""
     count=0
     state = False
+    state_old=False
     while(count!=2):
         l_ir = wp.digitalRead(IN['left_IR'])
         c_ir = wp.digitalRead(IN['center_IR'])
@@ -123,15 +124,12 @@ def ex4():
 
         pca.go_forward()
         print 'left:%d center:%d right:%d '%(l_ir,c_ir,r_ir)
-        if (bool(l_ir) and bool(c_ir) and bool(r_ir)) is True:
-            if(state!=True):
-                count+=1
-                state = True
-            if(count ==1):
-                if(state!=False):
-                    count+=1
-                    state=False
-        time.sleep(0.2)
+        if bool(c_ir) is True:
+            state = True
+            if(state_old != state):
+                count += 1
+                state = state_old
+            time.sleep(0.4)
     pca.stop_extreme()
     pass
 def ex4_demo():
