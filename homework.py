@@ -130,7 +130,7 @@ def ex4():
             pca.go_forward()
         else:
             pca.stop()
-
+        print l_ir,c_ir,r_ir
 
     pca.stop_extreme()
     pass
