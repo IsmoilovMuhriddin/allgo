@@ -117,7 +117,7 @@ def ex4():
     count=0
     state = False
     pca.stop()
-    pca.set_normal_speed(65)
+    pca.set_normal_speed(75)
     while(True):
 
         l_ir = wp.digitalRead(IN['left_IR'])
@@ -132,7 +132,7 @@ def ex4():
         else:
             pca.stop()
         print l_ir,c_ir,r_ir
-        time.sleep(0.05)
+        time.sleep(0.2)
     pca.stop_extreme()
     pass
 def ex4_demo():
