@@ -156,6 +156,63 @@ def ex5():
              Stop, beep the buzzer and flicker warning light when obstacle is detected
              Wait until no object detected on the line.
              Stop on stop line"""
+
+    def detect(l_ir, c_ir, r_ir):
+        pca.stop()
+        pca.set_normal_speed(90)
+
+        if bool(l_ir) is True:
+            pca.go_left(speed_cur=110)
+        elif bool(r_ir) is True:
+            pca.go_right(speed_cur=110)
+        elif bool(c_ir) is True:
+            pca.go_forward()
+        else:
+            pca.stop()
+        print
+        l_ir, c_ir, r_ir
+        time.sleep(0.2)
+
+    count = 0
+    state = False
+    state_old = False
+
+    while True:
+        l_ir = wp.digitalRead(IN['left_IR'])
+        c_ir = wp.digitalRead(IN['center_IR'])
+        r_ir = wp.digitalRead(IN['right_IR'])
+
+        # detect if obstacle
+        dist = ultra.distance()
+        print
+        'Distance(cm):%.2f' % dist
+        if dist > 45:
+            pca.set_normal_speed(90)
+            pca.go_forward()
+        elif dist > 40:
+            pca.set_normal_speed(65)
+            pca.go_forward()
+        elif dist > 30:
+            pca.set_normal_speed(60)
+            pca.go_forward()
+        elif dist < 30:
+            pca.stop()
+            warn()
+            continue
+        #detect and follow line
+        detect(l_ir,c_ir,r_ir)
+        print
+        'left:%d center:%d right:%d ' % (l_ir, c_ir, r_ir)
+        if bool(c_ir) is True:
+            state = True
+            if (state_old != state):
+                count += 1
+                if count == 4:
+                    pca.stop()
+                    break
+                state = state_old
+            time.sleep(0.2)
+        print 'Current Speed: ',pca.nSpeed
     pass
 
 def ex2_demo():
