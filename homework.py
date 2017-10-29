@@ -158,7 +158,6 @@ def ex5():
              Stop on stop line"""
 
     def detect(l_ir, c_ir, r_ir):
-        pca.stop()
         pca.set_normal_speed(90)
 
         if bool(l_ir) is True:
@@ -169,8 +168,7 @@ def ex5():
             pca.go_forward()
         else:
             pca.stop()
-        print
-        l_ir, c_ir, r_ir
+        print l_ir, c_ir, r_ir
         time.sleep(0.2)
 
     count = 0
@@ -184,25 +182,15 @@ def ex5():
 
         # detect if obstacle
         dist = ultra.distance()
-        print
-        'Distance(cm):%.2f' % dist
-        if dist > 45:
-            pca.set_normal_speed(90)
-            pca.go_forward()
-        elif dist > 40:
-            pca.set_normal_speed(65)
-            pca.go_forward()
-        elif dist > 30:
-            pca.set_normal_speed(60)
-            pca.go_forward()
-        elif dist < 30:
+        print 'Distance(cm):%.2f' % dist
+
+        if dist < 30:
             pca.stop()
             warn()
             continue
         #detect and follow line
-        detect(l_ir,c_ir,r_ir)
-        print
-        'left:%d center:%d right:%d ' % (l_ir, c_ir, r_ir)
+        detect(l_ir, c_ir, r_ir)
+        print 'left:%d center:%d right:%d ' % (l_ir, c_ir, r_ir)
         if bool(c_ir) is True:
             state = True
             if (state_old != state):
