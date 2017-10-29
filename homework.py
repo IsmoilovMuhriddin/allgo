@@ -157,13 +157,13 @@ def ex5():
              Wait until no object detected on the line.
              Stop on stop line"""
 
+    pca.set_normal_speed(85)
     def detect(l_ir, c_ir, r_ir):
-        pca.set_normal_speed(90)
 
         if bool(l_ir) and (bool(r_ir) is False) is True:
-            pca.go_left(speed_cur=110)
+            pca.go_left()
         elif bool(r_ir) and (bool(r_ir) is False) is True:
-            pca.go_right(speed_cur=110)
+            pca.go_right()
         elif bool(c_ir) is True:
             pca.go_forward()
         else:
