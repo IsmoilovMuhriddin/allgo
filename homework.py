@@ -168,7 +168,7 @@ def ex5():
             pca.go_forward()
         else:
             pca.stop()
-        print l_ir, c_ir, r_ir)
+        print l_ir, c_ir, r_ir
         time.sleep(0.3)
 
     count = 0
