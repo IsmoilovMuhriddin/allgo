@@ -109,6 +109,25 @@ def ex3():
             pca.stop_extreme()
         time.sleep(0.2)
     pass
+
+def detect():
+    pca.stop()
+    pca.set_normal_speed(90)
+    while (True):
+
+        l_ir = wp.digitalRead(IN['left_IR'])
+        c_ir = wp.digitalRead(IN['center_IR'])
+        r_ir = wp.digitalRead(IN['right_IR'])
+        if bool(l_ir) is True:
+            pca.go_left(speed_cur=110)
+        elif bool(r_ir) is True:
+            pca.go_right(speed_cur=110)
+        elif bool(c_ir) is True:
+            pca.go_forward()
+        else:
+            pca.stop()
+        print l_ir, c_ir, r_ir
+        time.sleep(0.2)
 def ex4():
     """4.IR sensor application
         Create a program with TCRT 5000 IR sensor
@@ -121,7 +140,7 @@ def ex4():
         c_ir = wp.digitalRead(IN['center_IR'])
         r_ir = wp.digitalRead(IN['right_IR'])
 
-        pca.go_forward()
+        pca.go_forward(speed_cur=100)
         print 'left:%d center:%d right:%d '%(l_ir,c_ir,r_ir)
         if (bool(l_ir) and bool(c_ir) and bool(r_ir)) is True:
             if(state!=True):
