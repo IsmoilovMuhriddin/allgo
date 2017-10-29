@@ -53,11 +53,11 @@ def ex1():
     """1. DC Motor Application
         Create a program that:  - Turn smoothly"""
     while(True):
-        pca.go_left(speed_cur=120,turning_rate=0.65)
+        pca.go_left(speed_cur=85,turning_rate=0.8)
         time.sleep(2)
         pca.stop()
         time.sleep(2)
-        pca.go_right(speed_cur=120,turning_rate=0.65)
+        pca.go_right(speed_cur=85,turning_rate=0.8)
         time.sleep(2)
         pca.stop()
         time.sleep(2)
@@ -85,7 +85,10 @@ def ex2():
         elif dist>40:
             pca.set_normal_speed(65)
             pca.go_forward()
-        else:
+        elif dist>30:
+            pca.set_normal_speed(60)
+            pca.go_forward()
+        elif dist<30:
             pca.stop()
             warn()
         #time.sleep(0.001)
@@ -95,19 +98,18 @@ def ex3():
     """3.Ultrasonic Sensor Application
          Create a program that Keep the 50cm distance with an object"""
     pca.stop()
-    pca.set_normal_speed(85)
+    pca.set_normal_speed(65)
     while True:
 
         dist = ultra.distance()
-        print
-        'Distance(cm):%.2f' % dist
-        if dist > 60:
+        print 'Distance(cm):%.2f' % dist
+        if dist > 50:
             pca.go_forward()
         elif dist<50:
             pca.go_back()
         else:
             pca.stop_extreme()
-        time.sleep(0.2)
+        #time.sleep(0.2)
     pass
 def ex4():
     """4.IR sensor application
@@ -122,14 +124,17 @@ def ex4():
         c_ir = wp.digitalRead(IN['center_IR'])
         r_ir = wp.digitalRead(IN['right_IR'])
 
-        pca.go_forward()
+        pca.go_forward(speed_cur=70)
         print 'left:%d center:%d right:%d '%(l_ir,c_ir,r_ir)
         if bool(c_ir) is True:
             state = True
             if(state_old != state):
                 count += 1
+                if count == 2:
+                    pca.stop()
+                    break
                 state = state_old
-            time.sleep(0.4)
+            time.sleep(0.2)
     pca.stop_extreme()
     pass
 def ex4_demo():
