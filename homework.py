@@ -131,7 +131,7 @@ def ex4():
         else:
             pca.stop()
         print l_ir,c_ir,r_ir
-
+        time.sleep(0.3)
     pca.stop_extreme()
     pass
 def ex4_demo():
