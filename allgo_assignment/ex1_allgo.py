@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 
+=======
+from  allgo_utils import PCA9685,ultrasonic,ir_sens
+>>>>>>> 7351c600657040361015d14e8fea3ad085c2c4af
 from  allgo_utils import PCA9685,ultrasonic,ir_sens
 import wiringpi as wp
 import time

@@ -1,4 +1,8 @@
 from  allgo_utils import PCA9685,ultrasonic,ir_sens
+<<<<<<< HEAD
+=======
+from  allgo_utils import PCA9685,ultrasonic,ir_sens
+>>>>>>> 7351c600657040361015d14e8fea3ad085c2c4af
 import wiringpi as wp
 import time
 
@@ -62,7 +66,11 @@ def ex2():
 
         dist = ultra.distance()
 
+<<<<<<< HEAD
         #tprint 'Distance(cm):%.2f' % dist
+=======
+        print 'Distance(cm):%.2f'%dist
+>>>>>>> 7351c600657040361015d14e8fea3ad085c2c4af
         if dist>45:
             pca.set_normal_speed(120)
             pca.go_forward()
