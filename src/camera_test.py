@@ -22,7 +22,7 @@ for frame in camera.capture_continuous(rawCapture, format="bgr", use_video_port=
         a = np.cos(theta)
         b = np.sin(theta)
         x0 = a*rho
-    	y0 = b*rho
+    	y0 = b*rho 
         x1 = int(x0 + 1000*(-b))
         y1 = int(y0 + 1000*(a))
         x2 = int(x0 - 1000*(-b))
