@@ -33,8 +33,8 @@ class SensorDataHandler(SocketServer.BaseRequestHandler):
         try:
             while self.data:
                 self.data = self.request.recv(1024)
-                sensor_data = round(float(self.data), 1)
-                #print "{} sent:".format(self.client_address[0])
+                #3sensor_data = round(float(self.data), 1)
+                print "{} sent:".format(self.client_address[0])
                 print sensor_data
         finally:
             print "Connection closed on thread 2"
@@ -70,7 +70,7 @@ class VideoStreamHandler(SocketServer.StreamRequestHandler):
                     half_gray = gray[120:240, :]
 
 
-                cv2.imshow('image', image)
+                    cv2.imshow('image', image)
                 # cv2.imshow('mlp_image', half_gray)
                 if cv2.waitKey(1) & 0xFF == ord('q'):
                     self.rc_car.stop()
