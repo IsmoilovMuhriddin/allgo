@@ -34,8 +34,9 @@ class SensorDataHandler(SocketServer.BaseRequestHandler):
             while self.data:
                 self.data = self.request.recv(1024)
                 #3sensor_data = round(float(self.data), 1)
-                print "{} sent:".format(self.client_address[0])
-                print sensor_data
+                #print "{} sent:".format(self.client_address[0])
+                #sensor_data
+                print self.data
         finally:
             print "Connection closed on thread 2"
 

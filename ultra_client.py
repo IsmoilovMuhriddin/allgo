@@ -14,8 +14,10 @@ try:
         distance = ult.distance()
         print "Distance: %.1f cm" % distance
         client_socket.send(str(distance))
+        time.sleep(0.1)
 finally:
     client_socket.close()
+
 
 
 
