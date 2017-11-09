@@ -91,7 +91,7 @@ class ThreadServer(object):
     distance_thread = threading.Thread(target=server_thread2, args=('127.0.0.1', 8004))
     distance_thread.start()
 
-    video_thread = threading.Thread(target=server_thread('192.168.1.100', 8002))
+    video_thread = threading.Thread(target=server_thread('127.0.0.1', 8002))
     video_thread.start()
 if __name__ == '__main__':
     ThreadServer()
