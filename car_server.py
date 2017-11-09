@@ -65,13 +65,13 @@ class VideoStreamHandler(SocketServer.StreamRequestHandler):
                     jpg = stream_bytes[first:last+2]
                     stream_bytes = stream_bytes[last+2:]
                     #gray = cv2.imdecode(np.fromstring(jpg, dtype=np.uint8), cv2.CV_LOAD_IMAGE_GRAYSCALE)
-                    #image = cv2.imdecode(np.fromstring(jpg, dtype=np.uint8), cv2.CV_LOAD_IMAGE_UNCHANGED)
+                    image = cv2.imdecode(np.fromstring(jpg, dtype=np.uint8), 0)
 
                     # lower half of the image
                     #half_gray = gray[120:240, :]
 
 
-                    cv2.imshow('image', jpg)
+                    cv2.imshow('image', image)
                 # cv2.imshow('mlp_image', half_gray)
                 if cv2.waitKey(1) & 0xFF == ord('q'):
                     self.rc_car.stop()
