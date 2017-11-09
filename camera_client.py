@@ -7,7 +7,7 @@ import picamera
 
 # create socket and bind host
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-client_socket.connect(('127.0.0.1', 8002))
+client_socket.connect(('localhost', 8002))
 connection = client_socket.makefile('wb')
 try:
     with picamera.PiCamera() as camera:

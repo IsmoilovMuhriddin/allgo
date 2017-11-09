@@ -89,10 +89,10 @@ class ThreadServer(object):
         server = SocketServer.TCPServer((host, port), SensorDataHandler)
         server.serve_forever()
 
-    distance_thread = threading.Thread(target=server_thread2, args=('127.0.0.1', 8004))
+    distance_thread = threading.Thread(target=server_thread2, args=('localhost', 8004))
     distance_thread.start()
 
-    video_thread = threading.Thread(target=server_thread('127.0.0.1', 8002))
+    video_thread = threading.Thread(target=server_thread('localhost', 8002))
     video_thread.start()
 if __name__ == '__main__':
     ThreadServer()
