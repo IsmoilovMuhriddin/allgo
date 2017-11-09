@@ -68,7 +68,7 @@ class VideoStreamHandler(SocketServer.StreamRequestHandler):
                     #image = cv2.imdecode(np.fromstring(jpg, dtype=np.uint8), cv2.CV_LOAD_IMAGE_UNCHANGED)
 
                     # lower half of the image
-                    half_gray = gray[120:240, :]
+                    #half_gray = gray[120:240, :]
 
 
                     cv2.imshow('image', jpg)
