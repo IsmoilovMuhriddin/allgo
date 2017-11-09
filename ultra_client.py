@@ -13,10 +13,11 @@ ult=ultrasonic(ULTRASONIC_TRIG,ULTRASONIC_ECHO)
 
 try:
     while True:
+        print "starting measure"
         dist= ult.distance()
         print "Distance: %.1f cm" % dist
         client_socket.send(str(dist))
-        time.sleep(0.1)
+        time.sleep(0.5)
 finally:
     client_socket.close()
 

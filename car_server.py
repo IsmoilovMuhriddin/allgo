@@ -33,10 +33,10 @@ class SensorDataHandler(SocketServer.BaseRequestHandler):
         try:
             while self.data:
                 self.data = self.request.recv(1024)
-                #3sensor_data = round(float(self.data), 1)
+                sensor_data = self.data
                 #print "{} sent:".format(self.client_address[0])
                 #sensor_data
-                print self.data
+                print sensor_data
         finally:
             print "Connection closed on thread 2"
 
@@ -74,7 +74,6 @@ class VideoStreamHandler(SocketServer.StreamRequestHandler):
                     cv2.imshow('image', image)
                 # cv2.imshow('mlp_image', half_gray)
                 if cv2.waitKey(1) & 0xFF == ord('q'):
-                    self.rc_car.stop()
                     break
             cv2.destroyAllWindows()
         finally:
