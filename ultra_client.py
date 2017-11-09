@@ -1,12 +1,14 @@
 from socket import *
 import time
 from allgo_utils import *
+ULTRASONIC_TRIG	= 3 # TRIG port is to use as output signal
+ULTRASONIC_ECHO = 23 # ECHO port is to use as input signal
 
 
 
 client_socket = socket(AF_INET,SOCK_STREAM)
 client_socket.connect(('localhost',8004))
-ult=ultrasonic()
+ult=ultrasonic(ULTRASONIC_TRIG,ULTRASONIC_ECHO)
 
 
 try:
