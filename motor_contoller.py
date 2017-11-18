@@ -2,6 +2,20 @@ import socket
 RASP_IP = '192.168.137.174'
 RASP_SERV_PORT = 7879
 
+command = {
+    # single commands
+    'rs': "rst_:",
+    'f': "fwd_:",
+    'rev': "rev_:",
+    'r': "rht_:",
+    'l': "lft_:",
+    # combination commands
+    'f_r': "f_rt:",
+    'f_l': "f_lf:",
+    'rev_r': "rv_r:",
+    'rev_l': "rv_l:",
+# 5 character in each string
+}
 
 class MotorControl(object):
     def __init__(self):
@@ -18,10 +32,10 @@ class MotorControl(object):
         try:
             stream_bytes = ''
             while True:
-                stream_bytes = self.connection.read()
+                stream_bytes = self.connection.read(5)
                 if not stream_bytes:
                     continue
-                print(stream_bytes)
+                print stream_bytes
 
 
         finally:
