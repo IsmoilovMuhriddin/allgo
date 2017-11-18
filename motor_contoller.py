@@ -18,7 +18,9 @@ class MotorControl(object):
         try:
             stream_bytes = ''
             while True:
-                stream_bytes = self.connection.read(20)
+                stream_bytes = self.connection.read()
+                if not stream_bytes:
+                    continue
                 print(stream_bytes)
 
 
