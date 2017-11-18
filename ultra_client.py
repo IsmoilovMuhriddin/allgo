@@ -1,6 +1,6 @@
 from socket import *
 import time
-from allgo_utils import *
+from allgo_utils import ultrasonic
 ULTRASONIC_TRIG	= 3 # TRIG port is to use as output signal
 ULTRASONIC_ECHO = 23 # ECHO port is to use as input signal
 
@@ -14,7 +14,7 @@ ult=ultrasonic(ULTRASONIC_TRIG,ULTRASONIC_ECHO)
 try:
     while True:
         print "starting measure"
-        dist= ult.distance()
+        dist = ult.distance()
         print "Distance: %.1f cm" % dist
         client_socket.send(str(dist))
         time.sleep(0.5)
