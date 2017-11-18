@@ -4,10 +4,11 @@ import struct
 import time
 import picamera
 
-
+COMP_IP = '192.168.137.71'
+COMP_SERV_PORT = 8002
 # create socket and bind host
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-client_socket.connect(('localhost', 8002))
+client_socket.connect((COMP_IP, COMP_SERV_PORT))
 connection = client_socket.makefile('wb')
 try:
     with picamera.PiCamera() as camera:
