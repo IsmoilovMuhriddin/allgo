@@ -1,4 +1,7 @@
 import socket
+from  allgo_utils import PCA9685,ultrasonic,ir_sens
+
+
 RASP_IP = '192.168.137.174'
 RASP_SERV_PORT = 7879
 
@@ -23,7 +26,7 @@ class MotorControl(object):
         self.server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
         self.server_socket.bind((RASP_IP, RASP_SERV_PORT))
         self.server_socket.listen(0)
-
+        self.pca = PCA9685()
         self.connection = self.server_socket.accept()[0].makefile('rb')
         self.control()
     def control(self):
@@ -35,7 +38,28 @@ class MotorControl(object):
                 stream_bytes = self.connection.read(5)
                 if not stream_bytes:
                     continue
-                print stream_bytes
+                if stream_bytes == command['f']:
+                    self.pca.go_forward()
+                elif stream_bytes == command['f_l']:
+                    self.pca.go_left()
+                elif stream_bytes == command['f_r']:
+                    self.pca.go_right()
+                elif stream_bytes == command['r']:
+                    self.pca.go_right(turning_rate=0)
+                elif stream_bytes == command['l']:
+                    self.pca.go_left(turning_rate=0)
+                elif stream_bytes == command['rev']:
+                    self.pca.go_back()
+                elif stream_bytes == command['rev_l']:
+                    self.pca.go_rev_left()
+                elif stream_bytes == command['rev_r']:
+                    self.pca.go_rev_right()
+                elif stream_bytes == command['rs']:
+                    self.pca.stop()
+                else:
+                    self.pca.stop()
+
+
 
 
         finally:
