@@ -1,2 +1,5 @@
+*.png
 venv
-.idea
+*.idea
+*.npz
+*.jpg
