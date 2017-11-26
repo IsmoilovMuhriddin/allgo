@@ -3,3 +3,4 @@ venv
 *.idea
 *.npz
 *.jpg
+*.pyc
