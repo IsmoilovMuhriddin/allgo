@@ -1,6 +1,6 @@
 import socket
-from  allgo_utils import PCA9685,ultrasonic,ir_sens
 
+from  rasp.allgo_utils import PCA9685
 
 RASP_IP = '192.168.137.174'
 RASP_SERV_PORT = 7879

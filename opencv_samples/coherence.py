@@ -74,7 +74,7 @@ if __name__ == '__main__':
 
     print('Press SPACE to update the image\n')
 
-    cv2.imshow('src', src)
+    cv2.imshow('dev', src)
     update()
     while True:
         ch = cv2.waitKey()
