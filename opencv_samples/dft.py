@@ -21,15 +21,15 @@ def shift_dft(src, dst=None):
         Rearrange the quadrants of Fourier image so that the origin is at
         the image center. Swaps quadrant 1 with 3, and 2 with 4.
 
-        src and dst arrays must be equal size & type
+        dev and dst arrays must be equal size & type
     '''
 
     if dst is None:
         dst = np.empty(src.shape, src.dtype)
     elif src.shape != dst.shape:
-        raise ValueError("src and dst must have equal sizes")
+        raise ValueError("dev and dst must have equal sizes")
     elif src.dtype != dst.dtype:
-        raise TypeError("src and dst must have equal types")
+        raise TypeError("dev and dst must have equal types")
 
     if src is dst:
         ret = np.empty(src.shape, src.dtype)

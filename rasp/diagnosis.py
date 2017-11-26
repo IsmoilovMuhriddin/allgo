@@ -1,12 +1,11 @@
-import sys
+import signal
+import time
 
 import wiringpi as wp
-import signal
-import sys
-import time
-from allgo_utils import ultrasonic as uls
-from allgo_utils import PCA9685
-from allgo_utils import ir_sens
+
+from rasp.allgo_utils import PCA9685
+from rasp.allgo_utils import ultrasonic as uls
+
 LOW = 0
 HIGH = 1
 OUTPUT = wp.OUTPUT

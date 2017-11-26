@@ -1,6 +1,8 @@
-from  allgo_utils import PCA9685,ultrasonic,ir_sens
-import wiringpi as wp
 import time
+
+import wiringpi as wp
+
+from  rasp.allgo_utils import PCA9685, ultrasonic
 
 DIR_DISTANCE_ALERT = 20
 preMillis = 0
