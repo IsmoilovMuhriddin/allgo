@@ -128,7 +128,7 @@ class PCA9685(object):
         if value == 1:
             self.set_pwm(pin, 4096, 0)
 
-    def go_forward(self, speed_cur=-1,delay=0.05):
+    def go_forward(self, speed_cur=-1):
         self.set_pin(self.en1Pin, HIGH_PIN)
         self.set_pin(self.en2Pin, LOW_PIN)
 
@@ -138,9 +138,8 @@ class PCA9685(object):
             speed_cur=self.nSpeed
         self.set_speed(self.enAPin, speed_cur)
         self.set_speed(self.enBPin, speed_cur)
-        time.sleep(delay)
 
-    def go_back(self, speed_cur=-1,delay=0.05):
+    def go_back(self, speed_cur=-1):
         self.set_pin(self.en1Pin, LOW_PIN)
         self.set_pin(self.en2Pin, HIGH_PIN)
 
@@ -150,8 +149,8 @@ class PCA9685(object):
             speed_cur=self.nSpeed
         self.set_speed(self.enAPin, speed_cur)
         self.set_speed(self.enBPin, speed_cur)
-        time.sleep(delay)
-    def go_left(self, speed_cur=-1,turning_rate=0.7,delay=0.05):
+
+    def go_left(self, speed_cur=-1,turning_rate=0.5):
         self.set_pin(self.en1Pin, LOW_PIN)
         self.set_pin(self.en2Pin, HIGH_PIN)
 
@@ -162,8 +161,8 @@ class PCA9685(object):
 
         self.set_speed(self.enAPin, int(speed_cur * turning_rate))
         self.set_speed(self.enBPin, speed_cur)
-        time.sleep(delay)
-    def go_right(self, speed_cur=-1,turning_rate=0.7,delay=0.05):
+
+    def go_right(self, speed_cur=-1,turning_rate=0.5):
         self.set_pin(self.en1Pin, HIGH_PIN)
         self.set_pin(self.en2Pin, LOW_PIN)
 
@@ -173,7 +172,7 @@ class PCA9685(object):
             speed_cur=self.nSpeed
         self.set_speed(self.enAPin, speed_cur)
         self.set_speed(self.enBPin, int(speed_cur * turning_rate))
-        time.sleep(delay)
+
     def stop(self):
         self.set_speed(self.enAPin, 0);
         self.set_speed(self.enBPin, 0);
@@ -199,29 +198,3 @@ class PCA9685(object):
 
     def off_buzz(self):
         self.set_pin(self.BuzzPin, 0)
-
-
-# complex commnads
-    def go_rev_right(self, speed_cur=-1,turning_rate=0.7,delay=0.05):
-        self.set_pin(self.en1Pin, LOW_PIN)
-        self.set_pin(self.en2Pin, HIGH_PIN)
-
-        self.set_pin(self.en3Pin, LOW_PIN)
-        self.set_pin(self.en4Pin, HIGH_PIN)
-        if speed_cur==-1:
-            speed_cur=self.nSpeed
-        self.set_speed(self.enAPin, speed_cur)
-        self.set_speed(self.enBPin, int(speed_cur * turning_rate))
-        time.sleep(delay)
-
-    def go_rev_left(self, speed_cur=-1,turning_rate=0.7,delay=0.05):
-        self.set_pin(self.en1Pin, LOW_PIN)
-        self.set_pin(self.en2Pin, HIGH_PIN)
-
-        self.set_pin(self.en3Pin, LOW_PIN)
-        self.set_pin(self.en4Pin, HIGH_PIN)
-        if speed_cur==-1:
-            speed_cur=self.nSpeed
-        self.set_speed(self.enAPin, int(speed_cur * turning_rate))
-        self.set_speed(self.enBPin, speed_cur)
-        time.sleep(delay)
