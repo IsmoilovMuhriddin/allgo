@@ -167,3 +167,4 @@ else:
 
 # try to avoid 'NoneType' object has no attribute 'TF_DeleteStatus' error
 keras.backend.clear_session()
+

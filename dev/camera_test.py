@@ -28,6 +28,7 @@ for frame in camera.capture_continuous(rawCapture, format="bgr", use_video_port=
         x2 = int(x0 - 1000*(-b))
         y2 = int(y0 - 1000*(a))
 	cv2.line(img,(x1,y1),(x2,y2),(0,0,255),2)
+
         
     # show the frame
     cv2.imshow("Frame", img)

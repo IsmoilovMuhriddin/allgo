@@ -37,6 +37,7 @@ for single_npz in training_data:
     image_array = np.vstack((image_array, train_temp))
     label_array = np.vstack((label_array, train_labels_temp))
 
+
 train = image_array[1:, :]
 train_labels = label_array[1:, :]
 
