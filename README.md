@@ -2,11 +2,11 @@
 Capstone Project (Inha University, 2017 fall semester)
 
 
-## Requirements
-* wiringpi
+##### Requirements
+_wiringpi_
 <pre><code>sudo pip install wiringpi</code></pre>
 
-# sample test    
+##### sample test    
 run diagnosis.py file
     
     python diagnosis.py
