@@ -1,1 +1,1 @@
-so here will be training data
+collect your data here training data
