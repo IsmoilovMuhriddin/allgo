@@ -4,7 +4,7 @@ import struct
 import time
 import picamera
 
-COMP_IP = '192.168.137.71'
+COMP_IP = '192.168.43.210'
 COMP_SERV_PORT = 8002
 # create socket and bind host
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)

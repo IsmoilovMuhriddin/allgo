@@ -27,10 +27,12 @@ class ultrasonic(object):
         wp.digitalWrite(self.trig,LOW)
         
         now_time = time.time()
-        while wp.digitalRead(self.echo)==LOW:
+        pulse_start=0
+        pulse_end=0
+        while wp.digitalRead(self.echo)== LOW:
             #and time.time()-now_time<timeout):
             pulse_start = time.time()
-        while wp.digitalRead(self.echo)==HIGH:
+        while wp.digitalRead(self.echo)== HIGH:
             pulse_end=time.time()
         pulse_dur = pulse_end-pulse_start
         distance=round(pulse_dur*17000.0,2)

@@ -8,6 +8,7 @@ from pygame.locals import *
 import socket
 import time
 import os
+
 # SocketServer.ThreadingTCPServer.allow_reuse_address = True
 
 RASP_IP = '192.168.43.70'
@@ -70,6 +71,16 @@ class CollectTrainingData(object):
         pygame.init()
 
         self.collect_data()
+    def save_image(self,image,filename,label=4):
+        if label==2:
+            # save streamed images
+            cv2.imwrite('training_images/forward/frame_{}.jpg'.format(filename), image)
+        elif label ==0:
+            cv2.imwrite('training_images/left/frame_{}.jpg'.format(filename), image)
+        elif label ==1:
+            cv2.imwrite('training_images/right/frame_{}.jpg'.format(filename), image)
+        else :
+            cv2.imwrite('training_images/unclassified/frame_{}.jpg'.format(filename), image)
 
     def collect_data(self):
 
@@ -80,9 +91,9 @@ class CollectTrainingData(object):
 
         print 'Start collecting images'
         e1 = cv2.getTickCount()
-        image_array = np.zeros((1, 38400))
+        image_array = np.zeros((1, 115200))
         label_array = np.zeros((1, 4), 'float')
-
+        image_to_list=[]
         # stream video frames one by one
         try:
 
@@ -97,19 +108,19 @@ class CollectTrainingData(object):
                 if first != -1 and last != -1:
                     jpg = stream_bytes[first:last + 2]
                     stream_bytes = stream_bytes[last + 2:]
-                    image = cv2.imdecode(np.fromstring(jpg, dtype=np.uint8), cv2.IMREAD_GRAYSCALE)
+                    image = cv2.imdecode(np.fromstring(jpg, dtype=np.uint8),cv2.IMREAD_ANYCOLOR)
 
                     # select lower half of the image
                     roi = image[120:240, :]
 
                     # save streamed images
-                    cv2.imwrite('training_images/frame{:>05}.jpg'.format(frame), image)
+                    #cv2.imwrite('training_images/frame{:>05}.jpg'.format(frame), image)
 
                     # cv2.imshow('roi_image',roi)
                     cv2.imshow('image', image)
 
                     # reshape roi image in one array
-                    temp_array = roi.reshape(1, 38400).astype(np.float32)
+                    temp_array = roi.reshape(1, 115200).astype(np.float32)
 
                     frame += 1
                     total_frame += 1
@@ -122,10 +133,13 @@ class CollectTrainingData(object):
                             # complex orders
                             if key_input[pygame.K_UP] and key_input[pygame.K_RIGHT]:
                                 print("Forward Right")
-                                image_array = np.vstack((image_array, temp_array))
+                                simage_array = np.vstack((image_array, temp_array))
                                 label_array = np.vstack((label_array, self.k[1]))
                                 saved_frame += 1
-                                # self.ser.write(chr(6))
+                                image_name=time.strftime("%m.%d.%Y_%H%M%S")
+                                image_to_list.append([image,image_name,1])
+                                self.save_image(image,image_name,1)
+                                #self.ser.write(chr(6))
                                 self.client_socket.send(command['f_r'])
 
                             elif key_input[pygame.K_UP] and key_input[pygame.K_LEFT]:
@@ -133,6 +147,9 @@ class CollectTrainingData(object):
                                 image_array = np.vstack((image_array, temp_array))
                                 label_array = np.vstack((label_array, self.k[0]))
                                 saved_frame += 1
+                                image_name=time.strftime("%m.%d.%Y_%H%M%S")
+                                image_to_list.append([image,image_name,0])
+                                #self.save_image(image,image_name,0)
                                 self.client_socket.send(command['f_l'])
 
                             elif key_input[pygame.K_DOWN] and key_input[pygame.K_RIGHT]:
@@ -150,6 +167,9 @@ class CollectTrainingData(object):
                                 saved_frame += 1
                                 image_array = np.vstack((image_array, temp_array))
                                 label_array = np.vstack((label_array, self.k[2]))
+                                image_name=time.strftime("%m.%d.%Y_%H%M%S")
+                                image_to_list.append([image,image_name,2])
+                                #self.save_image(image,image_name,2)
                                 self.client_socket.send(command['f'])
 
 
@@ -166,6 +186,9 @@ class CollectTrainingData(object):
                                 image_array = np.vstack((image_array, temp_array))
                                 label_array = np.vstack((label_array, self.k[1]))
                                 saved_frame += 1
+                                image_name=time.strftime("%m.%d.%Y_%H%M%S")
+                                image_to_list.append([image,image_name,1])
+                                #self.save_image(image,image_name,1)
                                 self.client_socket.send(command['r'])
 
 
@@ -174,6 +197,9 @@ class CollectTrainingData(object):
                                 image_array = np.vstack((image_array, temp_array))
                                 label_array = np.vstack((label_array, self.k[0]))
                                 saved_frame += 1
+                                image_name=time.strftime("%m.%d.%Y_%H%M%S")
+                                image_to_list.append([image,image_name,0])
+                                #self.save_image(image,image_name,0)
                                 self.client_socket.send(command['l'])
 
 
@@ -203,6 +229,8 @@ class CollectTrainingData(object):
             except IOError as e:
                 print(e)
 
+            for i in image_to_list:
+                self.save_image(i[0],i[1],i[2])
             e2 = cv2.getTickCount()
             # calculate streaming duration
             time0 = (e2 - e1) / cv2.getTickFrequency()

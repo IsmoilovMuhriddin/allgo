@@ -17,7 +17,7 @@ print 'Loading training data...'
 e0 = cv2.getTickCount()
 
 # load training data
-image_array = np.zeros((1, 38400))
+image_array = np.zeros((1, 115200))
 label_array = np.zeros((1, 4), 'float')
 training_data = glob.glob('training_data/*.npz')
 
@@ -50,7 +50,7 @@ print train_labels.shape
 show_images = False
 export_images = False
 should_train = True
-use_tensorflow = True
+use_tensorflow = False
 
 def show_image(sample, delay=200):
     sample = sample.reshape((120, 320)).astype(np.uint8)
@@ -122,7 +122,7 @@ if use_tensorflow:
 
 else:
     #create MLP
-    layer_sizes = np.int32([38400, 32, 4])
+    layer_sizes = np.int32([115200, 32, 4])
     model = cv2.ml.ANN_MLP_create()
     model.setLayerSizes(layer_sizes)
     model.setTrainMethod(cv2.ml.ANN_MLP_BACKPROP)

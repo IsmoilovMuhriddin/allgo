@@ -54,7 +54,7 @@ MAX_SPEED = 250
 NOR_SPEED = 120
 MIN_SPEED = 0
 
-MOTOR_START_DELAY = 3
+MOTOR_START_DELAY = 0.010 # 10 milliseconds
 
 logger = logging.getLogger(__name__)
 
@@ -66,7 +66,6 @@ class PCA9685(object):
         """Initialize the PCA9685."""
         # private variables of class
         # self.fd
-        self.nSpeed = NOR_SPEED
         self.enAPin = 0
         self.en1Pin = 1
         self.en2Pin = 2
@@ -75,7 +74,9 @@ class PCA9685(object):
         self.en4Pin = 4
         self.BuzzPin = 8
         self.fd = wp.wiringPiI2CSetup(0x60);
+        self.nSpeed = NOR_SPEED
         self.init_start()
+        
 
     def init_start(self):
         # Setup I2C interface for the device.
@@ -128,7 +129,7 @@ class PCA9685(object):
         if value == 1:
             self.set_pwm(pin, 4096, 0)
 
-    def go_forward(self, speed_cur=-1,delay=0.05):
+    def go_forward(self, speed_cur=-1,delay=0):
         self.set_pin(self.en1Pin, HIGH_PIN)
         self.set_pin(self.en2Pin, LOW_PIN)
 
@@ -136,11 +137,15 @@ class PCA9685(object):
         self.set_pin(self.en4Pin, LOW_PIN)
         if speed_cur==-1:
             speed_cur=self.nSpeed
+        
+        self.set_speed(self.enAPin, MAX_SPEED)
+        self.set_speed(self.enBPin, MAX_SPEED)
+        time.sleep(MOTOR_START_DELAY)
         self.set_speed(self.enAPin, speed_cur)
         self.set_speed(self.enBPin, speed_cur)
         time.sleep(delay)
 
-    def go_back(self, speed_cur=-1,delay=0.05):
+    def go_back(self, speed_cur=-1,delay=0):
         self.set_pin(self.en1Pin, LOW_PIN)
         self.set_pin(self.en2Pin, HIGH_PIN)
 
@@ -148,32 +153,70 @@ class PCA9685(object):
         self.set_pin(self.en4Pin, HIGH_PIN)
         if speed_cur==-1:
             speed_cur=self.nSpeed
+        self.set_speed(self.enAPin, MAX_SPEED)
+        self.set_speed(self.enBPin, MAX_SPEED)
+        time.sleep(MOTOR_START_DELAY)
         self.set_speed(self.enAPin, speed_cur)
         self.set_speed(self.enBPin, speed_cur)
         time.sleep(delay)
-    def go_left(self, speed_cur=-1,turning_rate=0.7,delay=0.05):
-        self.set_pin(self.en1Pin, LOW_PIN)
-        self.set_pin(self.en2Pin, HIGH_PIN)
-
+    def go_left(self, default=True,speed_cur=-1,speed_max=MAX_SPEED,speed_norm=-1,turning_rate=0.7,delay=0,motor_back=True):
+        
+        if motor_back:
+            self.set_pin(self.en1Pin, LOW_PIN)
+            self.set_pin(self.en2Pin, HIGH_PIN)
+        else:    
+            self.set_pin(self.en1Pin, HIGH_PIN)
+            self.set_pin(self.en2Pin, LOW_PIN)
         self.set_pin(self.en3Pin, HIGH_PIN)
         self.set_pin(self.en4Pin, LOW_PIN)
+
+        
         if speed_cur==-1:
             speed_cur=self.nSpeed
-
-        self.set_speed(self.enAPin, int(speed_cur * turning_rate))
-        self.set_speed(self.enBPin, speed_cur)
-        time.sleep(delay)
-    def go_right(self, speed_cur=-1,turning_rate=0.7,delay=0.05):
+        if speed_norm==-1:
+            speed_norm=self.nSpeed
+            
+        self.set_speed(self.enAPin,MAX_SPEED)
+        self.set_speed(self.enBPin,MAX_SPEED)
+        time.sleep(MOTOR_START_DELAY)
+        if default:
+            self.set_speed(self.enAPin,speed_norm)
+            self.set_speed(self.enBPin,speed_max)
+        else:    
+            self.set_speed(self.enAPin, int(speed_cur * turning_rate))
+            self.set_speed(self.enBPin, speed_cur)
+        time.sleep(delay)    
+        #print(speed_cur,turning_rate,delay,motor_back)
+        
+        
+    def go_right(self, default=True,speed_cur=-1,speed_max=MAX_SPEED,speed_norm=-1,turning_rate=0.7,delay=0,motor_back=True):
         self.set_pin(self.en1Pin, HIGH_PIN)
         self.set_pin(self.en2Pin, LOW_PIN)
 
-        self.set_pin(self.en3Pin, LOW_PIN)
-        self.set_pin(self.en4Pin, HIGH_PIN)
+        if motor_back:
+            self.set_pin(self.en3Pin, LOW_PIN)
+            self.set_pin(self.en4Pin, HIGH_PIN)
+        else:    
+            self.set_pin(self.en3Pin, HIGH_PIN)
+            self.set_pin(self.en4Pin, LOW_PIN)
         if speed_cur==-1:
             speed_cur=self.nSpeed
-        self.set_speed(self.enAPin, speed_cur)
-        self.set_speed(self.enBPin, int(speed_cur * turning_rate))
-        time.sleep(delay)
+        if speed_norm==-1:
+            speed_norm=self.nSpeed
+            
+        self.set_speed(self.enBPin,MAX_SPEED)
+        self.set_speed(self.enAPin,MAX_SPEED)
+        time.sleep(MOTOR_START_DELAY)
+        if default:
+            self.set_speed(self.enBPin,speed_norm)
+            self.set_speed(self.enAPin,speed_max)
+        else:
+            self.set_speed(self.enAPin, speed_cur)
+            self.set_speed(self.enBPin, int(speed_cur * turning_rate))
+        time.sleep(delay)    
+        #print(speed_cur,turning_rate,delay,motor_back)
+        
+        
     def stop(self):
         self.set_speed(self.enAPin, 0);
         self.set_speed(self.enBPin, 0);
