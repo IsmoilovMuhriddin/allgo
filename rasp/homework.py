@@ -1,8 +1,6 @@
-import time
-
+from  allgo_utils import PCA9685,ultrasonic,ir_sens
 import wiringpi as wp
-
-from  rasp.allgo_utils import PCA9685, ultrasonic
+import time
 
 DIR_DISTANCE_ALERT = 20
 preMillis = 0
@@ -62,7 +60,7 @@ def ex1():
         pca.go_right(speed_cur=85,turning_rate=0.8)
         time.sleep(2)
         pca.stop()
-        time.sleep(2)
+        #time.sleep(2)
         pass
 
     pass
@@ -81,18 +79,18 @@ def ex2():
         dist = ultra.distance()
 
         print 'Distance(cm):%.2f'%dist
-        if dist>45:
+        if dist>50:
             pca.set_normal_speed(120)
             pca.go_forward()
         elif dist>40:
             pca.set_normal_speed(70)
             pca.go_forward()
-        elif dist>30:
-            pca.set_normal_speed(60)
-            pca.go_forward()
+        #elif dist>30:
+        #    pca.set_normal_speed(60)
+        #    pca.go_forward()
         elif dist<30:
             pca.stop()
-            warn()
+            warn(1)
         #time.sleep(0.001)
     pass
 
@@ -105,9 +103,9 @@ def ex3():
 
         dist = ultra.distance()
         print 'Distance(cm):%.2f' % dist
-        if dist > 50:
+        if dist > 52:
             pca.go_forward()
-        elif dist<50:
+        elif dist<48:
             pca.go_back()
         else:
             pca.stop_extreme()
@@ -224,8 +222,33 @@ def ex2_demo():
 
 
     pass
+def test_forward(sp=45):
+    pca.go_forward(delay=1.1,speed_cur=sp)
+    time.sleep(0)
+    pca.stop()
+def test_right():
+    
+    #pca.go_forward(delay=0.02)
+    for i in range(5):
+        pca.go_right(speed_max=120,speed_norm=70,delay=0.05,motor_back=False)
+        time.sleep(0.5)
+    #pca.go_left(speed_max=120,speed_norm=70,delay=0.05,motor_back=False)
+    #time.sleep(0.5)
+    #pca.go_forward()
+    #time.sleep(0.5)
+    pca.stop()
+    
+def test_left():
+    for i in range(20):
+        pca.go_left(speed_max=100,speed_norm=70,delay=0.05,motor_back=False)
+    pca.stop()
+def test_begin():
+    #pca.go_forward(delay=1.2)
+    pca.go_right(delay=0.5, speed_max=100, speed_norm=70,motor_back=True)
+    pca.stop()
 
-
+            
+    
 def main():
     setup()
     while(True):
@@ -235,8 +258,13 @@ def main():
               '2 - Ultrasonic sensor application\n' \
               '3 - Ultrasonic sensor application\n' \
               '4 - IR sensor application\n' \
-              '5 - Multiple Sensor Application\n'
-        menu=int(input())
+              '5 - Multiple Sensor Application\n'\
+              '6 - TEST RIGHT\n' \
+              '7 - TEST Left\n'
+            
+        
+        inp=[int(x) for x in raw_input().split()]
+        menu=inp[0]
         if menu == 1:
             ex1()
         elif menu == 2:
@@ -248,7 +276,13 @@ def main():
         elif menu == 5:
             ex5()
         elif menu == 6:
-            ex4_demo()
+            test_right()
+        elif menu == 7:
+            test_left()
+        elif menu == 8:
+            test_forward(sp=inp[1])
+        elif menu == 9:
+            test_begin()
 
     pass
 #here
