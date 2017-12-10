@@ -8,8 +8,8 @@
     
  ##### Color Detection Approach 
  Two bootom frames checked for their colors and decision is made accordingly
- //here two picture
- ![Cat](https://raw.githubusercontent.com/paulmelnikow/zsh-startup-timer/3923c60fc66d4223ccf063d169ccf2ff167b1270/cat.png)
+ 
+ ![Cat](pics/pic1.jpg)
  ```commandline
 python rasp/autocar.py
 ```    
