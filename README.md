@@ -7,7 +7,7 @@
     - Neural Networks
     
  ##### Color Detection Approach 
- Two bootom frames checked for their colors and decision is made accordingly
+ Two bottom frames checked for their colors and decision is made accordingly
  
  ![Cat](pics/pic1.jpg)
  ```commandline
