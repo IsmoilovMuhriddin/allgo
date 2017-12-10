@@ -9,7 +9,7 @@
  ##### Color Detection Approach 
  Two bootom frames checked for their colors and decision is made accordingly
  
- ![Cat](pic1.jpg)
+ ![Cat](pics/pic1.jpg)
  ```commandline
 python rasp/autocar.py
 ```    
