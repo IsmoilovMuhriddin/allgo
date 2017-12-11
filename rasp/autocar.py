@@ -87,7 +87,7 @@ def detectRed(img,count=7,bottom=False,first=False):
     if bottom==True:
         crop_img=img[180:,:]
     elif first==True:
-        crop_img = img[40:100,160:200]
+        crop_img = img[40:100,160:240]
     else:
         crop_img = img[40:100,240:320]
 
@@ -247,7 +247,7 @@ def main():
         elif first_obstacle:
             if distance < 20:
                 print("Obstacle identified, distance=", distance)
-                pca.go_right(speed_max=100, speed_norm=60, delay=0.3, motor_back=True)
+                pca.go_right(speed_max=100, speed_norm=60, delay=0.5, motor_back=True)
                 first_obstacle_found=True
             else:
                 way(move)

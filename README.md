@@ -9,11 +9,11 @@
  ##### Color Detection Approach 
  Two bottom frames checked for their colors and decision is made accordingly
  
- ![Cat](pics/pic1.jpg)
+ ![Cat](pics/pic1.jpg width=320 height=240)
  ```commandline
 python rasp/autocar.py
 ```    
-
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRCX5FwVTLh-jBEkWzX7Yslm6VVHjOoNLJOurFSI8OQ09s3ung_BhXZGYkRVYEF68yMnu_EkMQ0sMIn/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
  ##### Neural Networks Approach
  Only Model creation stage is completed. Computer initialise server to collect camera data from raspberry takes input from keyboard where to go, and sends this data to raspberry to control motor. Simultaneously saves  frame and command in data array for model training.
  
@@ -35,4 +35,7 @@ pip install wiringpi
 pip install raspicam
 ```
 
-##### 
+<p>Sample</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dHHmUF9gs70" frameborder="0" allowfullscreen></iframe>
+<p>Presentation</p>
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRCX5FwVTLh-jBEkWzX7Yslm6VVHjOoNLJOurFSI8OQ09s3ung_BhXZGYkRVYEF68yMnu_EkMQ0sMIn/embed?start=true&loop=true&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
