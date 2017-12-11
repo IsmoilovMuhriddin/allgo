@@ -9,7 +9,7 @@
  ##### Color Detection Approach 
  Two bottom frames checked for their colors and decision is made accordingly
  
- ![Cat](pics/pic1.jpg width=320 height=240)
+ ![Cat](pics/pic1.jpg)
  ```commandline
 python rasp/autocar.py
 ```    

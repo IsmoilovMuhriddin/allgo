@@ -247,7 +247,7 @@ def main():
         elif first_obstacle:
             if distance < 20:
                 print("Obstacle identified, distance=", distance)
-                pca.go_right(speed_max=100, speed_norm=60, delay=0.5, motor_back=True)
+                pca.go_right(speed_max=100, speed_norm=60, delay=0.5    , motor_back=True)
                 first_obstacle_found=True
             else:
                 way(move)
