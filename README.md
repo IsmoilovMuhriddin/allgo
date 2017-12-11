@@ -34,8 +34,3 @@ Comp
 pip install wiringpi
 pip install raspicam
 ```
-
-<p>Sample</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/dHHmUF9gs70" frameborder="0" allowfullscreen></iframe>
-<p>Presentation</p>
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRCX5FwVTLh-jBEkWzX7Yslm6VVHjOoNLJOurFSI8OQ09s3ung_BhXZGYkRVYEF68yMnu_EkMQ0sMIn/embed?start=true&loop=true&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
